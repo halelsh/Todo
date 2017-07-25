@@ -58,26 +58,26 @@
 	
 	var _router2 = _interopRequireDefault(_router);
 	
-	var _vuexRouterSync = __webpack_require__(54);
+	var _vuexRouterSync = __webpack_require__(56);
 	
-	var _store = __webpack_require__(52);
+	var _store = __webpack_require__(54);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
-	var _MainView = __webpack_require__(13);
+	var _MainView = __webpack_require__(41);
 	
 	var _MainView2 = _interopRequireDefault(_MainView);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(55);
+	__webpack_require__(57);
 	// var rtlcss = require('rtlcss');
-	__webpack_require__(68);
+	__webpack_require__(70);
 	// import Vodal from 'vodal';
 	// import "vodal/common.css";
 	// import "vodal/rotate.css";
 	
-	__webpack_require__(68);
+	__webpack_require__(70);
 	// Vue.component(Vodal.name, Vodal);
 	_vue2.default.use(_vueRouter2.default);
 	(0, _vuexRouterSync.sync)(_store2.default, _router2.default);
@@ -12898,11 +12898,11 @@
 	
 	var _LoginView2 = _interopRequireDefault(_LoginView);
 	
-	var _MainView = __webpack_require__(13);
+	var _MainView = __webpack_require__(41);
 	
 	var _MainView2 = _interopRequireDefault(_MainView);
 	
-	var _store = __webpack_require__(52);
+	var _store = __webpack_require__(54);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -12933,7 +12933,7 @@
 	__vue_exports__ = __webpack_require__(10)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(12)
+	var __vue_template__ = __webpack_require__(40)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -13002,7 +13002,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\nbody[data-v-5aef46c2] {\n    padding-top: 90px;\n}\n.panel-login[data-v-5aef46c2] {\n    border-color: #ccc;\n    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n}\n.panel-login > .panel-heading[data-v-5aef46c2] {\n    color: #00415d;\n    background-color: #fff;\n    border-color: #fff;\n    text-align: center;\n}\n.panel-login > .panel-heading a[data-v-5aef46c2] {\n    text-decoration: none;\n    color: #666;\n    font-weight: bold;\n    font-size: 15px;\n    -webkit-transition: all 0.1s linear;\n    -moz-transition: all 0.1s linear;\n    transition: all 0.1s linear;\n}\n.panel-login > .panel-heading a.active[data-v-5aef46c2] {\n    color: #029f5b;\n    font-size: 18px;\n}\n.panel-login > .panel-heading hr[data-v-5aef46c2] {\n    margin-top: 10px;\n    margin-bottom: 0px;\n    clear: both;\n    border: 0;\n    height: 1px;\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n}\n.panel-login input[type=\"text\"][data-v-5aef46c2], .panel-login input[type=\"email\"][data-v-5aef46c2], .panel-login input[type=\"password\"][data-v-5aef46c2] {\n    height: 45px;\n    border: 1px solid #ddd;\n    font-size: 16px;\n    -webkit-transition: all 0.1s linear;\n    -moz-transition: all 0.1s linear;\n    transition: all 0.1s linear;\n}\n.panel-login input[data-v-5aef46c2]:hover,\n.panel-login input[data-v-5aef46c2]:focus {\n    outline: none;\n    -webkit-box-shadow: none;\n    -moz-box-shadow: none;\n    box-shadow: none;\n    border-color: #ccc;\n}\n.btn-login[data-v-5aef46c2] {\n    background-color: #59B2E0;\n    outline: none;\n    color: #fff;\n    font-size: 14px;\n    height: auto;\n    font-weight: normal;\n    padding: 14px 0;\n    text-transform: uppercase;\n    border-color: #59B2E6;\n}\n.btn-login[data-v-5aef46c2]:hover,\n.btn-login[data-v-5aef46c2]:focus {\n    color: #fff;\n    background-color: #53A3CD;\n    border-color: #53A3CD;\n}\n.forgot-password[data-v-5aef46c2] {\n    text-decoration: underline;\n    color: #888;\n}\n.forgot-password[data-v-5aef46c2]:hover,\n.forgot-password[data-v-5aef46c2]:focus {\n    text-decoration: underline;\n    color: #666;\n}\n.btn-register[data-v-5aef46c2] {\n    background-color: #1CB94E;\n    outline: none;\n    color: #fff;\n    font-size: 14px;\n    height: auto;\n    font-weight: normal;\n    padding: 14px 0;\n    text-transform: uppercase;\n    border-color: #1CB94A;\n}\n.btn-register[data-v-5aef46c2]:hover,\n.btn-register[data-v-5aef46c2]:focus {\n    color: #fff;\n    background-color: #1CA347;\n    border-color: #1CA347;\n}\n\n", "", {"version":3,"sources":["C:/wamp64/www/todo/dev/views/LoginView.vue?520d93e0"],"names":[],"mappings":";AAoIA;IACA,kBAAA;CACA;AAEA;IACA,mBAAA;IACA,uDAAA;IACA,oDAAA;IACA,+CAAA;CACA;AAEA;IACA,eAAA;IACA,uBAAA;IACA,mBAAA;IACA,mBAAA;CACA;AAEA;IACA,sBAAA;IACA,YAAA;IACA,kBAAA;IACA,gBAAA;IACA,oCAAA;IACA,iCAAA;IACA,4BAAA;CACA;AAEA;IACA,eAAA;IACA,gBAAA;CACA;AAEA;IACA,iBAAA;IACA,mBAAA;IACA,YAAA;IACA,UAAA;IACA,YAAA;IACA,yGAAA;IACA,sGAAA;IACA,qGAAA;IACA,oGAAA;CACA;AAEA;IACA,aAAA;IACA,uBAAA;IACA,gBAAA;IACA,oCAAA;IACA,iCAAA;IACA,4BAAA;CACA;AAEA;;IAEA,cAAA;IACA,yBAAA;IACA,sBAAA;IACA,iBAAA;IACA,mBAAA;CACA;AAEA;IACA,0BAAA;IACA,cAAA;IACA,YAAA;IACA,gBAAA;IACA,aAAA;IACA,oBAAA;IACA,gBAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;;IAEA,YAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;IACA,2BAAA;IACA,YAAA;CACA;AAEA;;IAEA,2BAAA;IACA,YAAA;CACA;AAEA;IACA,0BAAA;IACA,cAAA;IACA,YAAA;IACA,gBAAA;IACA,aAAA;IACA,oBAAA;IACA,gBAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;;IAEA,YAAA;IACA,0BAAA;IACA,sBAAA;CACA","file":"LoginView.vue","sourcesContent":["<template>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 col-md-offset-3\">\r\n                <div class=\"panel panel-login\">\r\n                    <div class=\"panel-heading\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-xs-6\">\r\n                                <a href=\"#\" class=\"active\" id=\"login-form-link\">Login</a>\r\n                            </div>\r\n                            <div class=\"col-xs-6\">\r\n                                <a href=\"#\" id=\"register-form-link\">Register</a>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                    </div>\r\n                    <div class=\"panel-body\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-12\">\r\n                                <form id=\"login-form\" action=\"https://phpoll.com/login/process\" method=\"post\"\r\n                                      role=\"form\" style=\"display: block;\">\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"text\" name=\"username\" id=\"username\" tabindex=\"1\"\r\n                                               class=\"form-control\" placeholder=\"Username\" value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"password\" id=\"password\" tabindex=\"2\"\r\n                                               class=\"form-control\" placeholder=\"Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group text-center\">\r\n                                        <input type=\"checkbox\" tabindex=\"3\" class=\"\" name=\"remember\" id=\"remember\">\r\n                                        <label for=\"remember\"> Remember Me</label>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-sm-6 col-sm-offset-3\">\r\n                                                <input type=\"submit\" name=\"login-submit\" id=\"login-submit\" tabindex=\"4\"\r\n                                                       class=\"form-control btn btn-login\" value=\"Log In\">\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-lg-12\">\r\n                                                <div class=\"text-center\">\r\n                                                    <a href=\"https://phpoll.com/recover\" tabindex=\"5\"\r\n                                                       class=\"forgot-password\">Forgot Password?</a>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </form>\r\n                                <form id=\"register-form\" action=\"https://phpoll.com/register/process\" method=\"post\"\r\n                                      role=\"form\" style=\"display: none;\">\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"text\" name=\"username\" id=\"username\" tabindex=\"1\"\r\n                                               class=\"form-control\" placeholder=\"Username\" value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control\"\r\n                                               placeholder=\"Email Address\" value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"password\" id=\"password\" tabindex=\"2\"\r\n                                               class=\"form-control\" placeholder=\"Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"confirm-password\" id=\"confirm-password\"\r\n                                               tabindex=\"2\" class=\"form-control\" placeholder=\"Confirm Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-sm-6 col-sm-offset-3\">\r\n                                                <input type=\"submit\" name=\"register-submit\" id=\"register-submit\"\r\n                                                       tabindex=\"4\" class=\"form-control btn btn-register\"\r\n                                                       value=\"Register Now\">\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n\r\n\r\n    export default {\r\n        props: [],\r\n        components: {},\r\n        data () {\r\n            return {}\r\n        },\r\n        computed: {},\r\n        methods: {},\r\n        created(){\r\n\r\n        },\r\n        mounted(){\r\n            $(function () {\r\n\r\n                $('#login-form-link').click(function (e) {\r\n                    $(\"#login-form\").delay(100).fadeIn(100);\r\n                    $(\"#register-form\").fadeOut(100);\r\n                    $('#register-form-link').removeClass('active');\r\n                    $(this).addClass('active');\r\n                    e.preventDefault();\r\n                });\r\n                $('#register-form-link').click(function (e) {\r\n                    $(\"#register-form\").delay(100).fadeIn(100);\r\n                    $(\"#login-form\").fadeOut(100);\r\n                    $('#login-form-link').removeClass('active');\r\n                    $(this).addClass('active');\r\n                    e.preventDefault();\r\n                });\r\n\r\n            });\r\n\r\n        },\r\n        updated(){\r\n        },\r\n        destroyed(){\r\n        }\r\n    }\r\n</script>\r\n\r\n<style scoped=\"\">\r\n    body {\r\n        padding-top: 90px;\r\n    }\r\n\r\n    .panel-login {\r\n        border-color: #ccc;\r\n        -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n        -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n    }\r\n\r\n    .panel-login > .panel-heading {\r\n        color: #00415d;\r\n        background-color: #fff;\r\n        border-color: #fff;\r\n        text-align: center;\r\n    }\r\n\r\n    .panel-login > .panel-heading a {\r\n        text-decoration: none;\r\n        color: #666;\r\n        font-weight: bold;\r\n        font-size: 15px;\r\n        -webkit-transition: all 0.1s linear;\r\n        -moz-transition: all 0.1s linear;\r\n        transition: all 0.1s linear;\r\n    }\r\n\r\n    .panel-login > .panel-heading a.active {\r\n        color: #029f5b;\r\n        font-size: 18px;\r\n    }\r\n\r\n    .panel-login > .panel-heading hr {\r\n        margin-top: 10px;\r\n        margin-bottom: 0px;\r\n        clear: both;\r\n        border: 0;\r\n        height: 1px;\r\n        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n    }\r\n\r\n    .panel-login input[type=\"text\"], .panel-login input[type=\"email\"], .panel-login input[type=\"password\"] {\r\n        height: 45px;\r\n        border: 1px solid #ddd;\r\n        font-size: 16px;\r\n        -webkit-transition: all 0.1s linear;\r\n        -moz-transition: all 0.1s linear;\r\n        transition: all 0.1s linear;\r\n    }\r\n\r\n    .panel-login input:hover,\r\n    .panel-login input:focus {\r\n        outline: none;\r\n        -webkit-box-shadow: none;\r\n        -moz-box-shadow: none;\r\n        box-shadow: none;\r\n        border-color: #ccc;\r\n    }\r\n\r\n    .btn-login {\r\n        background-color: #59B2E0;\r\n        outline: none;\r\n        color: #fff;\r\n        font-size: 14px;\r\n        height: auto;\r\n        font-weight: normal;\r\n        padding: 14px 0;\r\n        text-transform: uppercase;\r\n        border-color: #59B2E6;\r\n    }\r\n\r\n    .btn-login:hover,\r\n    .btn-login:focus {\r\n        color: #fff;\r\n        background-color: #53A3CD;\r\n        border-color: #53A3CD;\r\n    }\r\n\r\n    .forgot-password {\r\n        text-decoration: underline;\r\n        color: #888;\r\n    }\r\n\r\n    .forgot-password:hover,\r\n    .forgot-password:focus {\r\n        text-decoration: underline;\r\n        color: #666;\r\n    }\r\n\r\n    .btn-register {\r\n        background-color: #1CB94E;\r\n        outline: none;\r\n        color: #fff;\r\n        font-size: 14px;\r\n        height: auto;\r\n        font-weight: normal;\r\n        padding: 14px 0;\r\n        text-transform: uppercase;\r\n        border-color: #1CB94A;\r\n    }\r\n\r\n    .btn-register:hover,\r\n    .btn-register:focus {\r\n        color: #fff;\r\n        background-color: #1CA347;\r\n        border-color: #1CA347;\r\n    }\r\n\r\n</style>"],"sourceRoot":""}]);
+	exports.push([module.id, "\nbody[data-v-5aef46c2] {\n    padding-top: 90px;\n}\n.panel-login[data-v-5aef46c2] {\n    border-color: #ccc;\n    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\n}\n.panel-login > .panel-heading[data-v-5aef46c2] {\n    color: #00415d;\n    background-color: #fff;\n    border-color: #fff;\n    text-align: center;\n}\n.panel-login > .panel-heading a[data-v-5aef46c2] {\n    text-decoration: none;\n    color: #666;\n    font-weight: bold;\n    font-size: 15px;\n    -webkit-transition: all 0.1s linear;\n    -moz-transition: all 0.1s linear;\n    transition: all 0.1s linear;\n}\n.panel-login > .panel-heading a.active[data-v-5aef46c2] {\n    color: #029f5b;\n    font-size: 18px;\n}\n.panel-login > .panel-heading hr[data-v-5aef46c2] {\n    margin-top: 10px;\n    margin-bottom: 0px;\n    clear: both;\n    border: 0;\n    height: 1px;\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\n}\n.panel-login input[type=\"text\"][data-v-5aef46c2], .panel-login input[type=\"email\"][data-v-5aef46c2], .panel-login input[type=\"password\"][data-v-5aef46c2] {\n    height: 45px;\n    border: 1px solid #ddd;\n    font-size: 16px;\n    -webkit-transition: all 0.1s linear;\n    -moz-transition: all 0.1s linear;\n    transition: all 0.1s linear;\n}\n.panel-login input[data-v-5aef46c2]:hover,\n.panel-login input[data-v-5aef46c2]:focus {\n    outline: none;\n    -webkit-box-shadow: none;\n    -moz-box-shadow: none;\n    box-shadow: none;\n    border-color: #ccc;\n}\n.btn-login[data-v-5aef46c2] {\n    background-color: #59B2E0;\n    outline: none;\n    color: #fff;\n    font-size: 14px;\n    height: auto;\n    font-weight: normal;\n    padding: 14px 0;\n    text-transform: uppercase;\n    border-color: #59B2E6;\n}\n.btn-login[data-v-5aef46c2]:hover,\n.btn-login[data-v-5aef46c2]:focus {\n    color: #fff;\n    background-color: #53A3CD;\n    border-color: #53A3CD;\n}\n.forgot-password[data-v-5aef46c2] {\n    text-decoration: underline;\n    color: #888;\n}\n.forgot-password[data-v-5aef46c2]:hover,\n.forgot-password[data-v-5aef46c2]:focus {\n    text-decoration: underline;\n    color: #666;\n}\n.btn-register[data-v-5aef46c2] {\n    background-color: #1CB94E;\n    outline: none;\n    color: #fff;\n    font-size: 14px;\n    height: auto;\n    font-weight: normal;\n    padding: 14px 0;\n    text-transform: uppercase;\n    border-color: #1CB94A;\n}\n.btn-register[data-v-5aef46c2]:hover,\n.btn-register[data-v-5aef46c2]:focus {\n    color: #fff;\n    background-color: #1CA347;\n    border-color: #1CA347;\n}\n\n", "", {"version":3,"sources":["C:/wamp64/www/todo/dev/views/LoginView.vue?e0815ce6"],"names":[],"mappings":";AAiJA;IACA,kBAAA;CACA;AAEA;IACA,mBAAA;IACA,uDAAA;IACA,oDAAA;IACA,+CAAA;CACA;AAEA;IACA,eAAA;IACA,uBAAA;IACA,mBAAA;IACA,mBAAA;CACA;AAEA;IACA,sBAAA;IACA,YAAA;IACA,kBAAA;IACA,gBAAA;IACA,oCAAA;IACA,iCAAA;IACA,4BAAA;CACA;AAEA;IACA,eAAA;IACA,gBAAA;CACA;AAEA;IACA,iBAAA;IACA,mBAAA;IACA,YAAA;IACA,UAAA;IACA,YAAA;IACA,yGAAA;IACA,sGAAA;IACA,qGAAA;IACA,oGAAA;CACA;AAEA;IACA,aAAA;IACA,uBAAA;IACA,gBAAA;IACA,oCAAA;IACA,iCAAA;IACA,4BAAA;CACA;AAEA;;IAEA,cAAA;IACA,yBAAA;IACA,sBAAA;IACA,iBAAA;IACA,mBAAA;CACA;AAEA;IACA,0BAAA;IACA,cAAA;IACA,YAAA;IACA,gBAAA;IACA,aAAA;IACA,oBAAA;IACA,gBAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;;IAEA,YAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;IACA,2BAAA;IACA,YAAA;CACA;AAEA;;IAEA,2BAAA;IACA,YAAA;CACA;AAEA;IACA,0BAAA;IACA,cAAA;IACA,YAAA;IACA,gBAAA;IACA,aAAA;IACA,oBAAA;IACA,gBAAA;IACA,0BAAA;IACA,sBAAA;CACA;AAEA;;IAEA,YAAA;IACA,0BAAA;IACA,sBAAA;CACA","file":"LoginView.vue","sourcesContent":["<template>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 col-md-offset-3\">\r\n                <div class=\"panel panel-login\">\r\n                    <div class=\"panel-heading\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-xs-6\">\r\n                                <a href=\"#\" class=\"active\" id=\"login-form-link\">Login</a>\r\n                            </div>\r\n                            <div class=\"col-xs-6\">\r\n                                <a href=\"#\" id=\"register-form-link\">Register</a>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                    </div>\r\n                    <div class=\"panel-body\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-12\">\r\n                                <form id=\"login-form\"\r\n                                      role=\"form\" style=\"display: block;\">\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"text\" name=\"username\" tabindex=\"1\"\r\n                                               v-model=\"user.username\" class=\"form-control\" placeholder=\"Username\"\r\n                                               value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"password\" tabindex=\"2\"\r\n                                               v-model=\"user.password\" class=\"form-control\" placeholder=\"Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group text-center\">\r\n                                        <input type=\"checkbox\" tabindex=\"3\" class=\"\" name=\"remember\" id=\"remember\">\r\n                                        <label for=\"remember\"> Remember Me</label>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-sm-6 col-sm-offset-3\">\r\n                                                <input type=\"submit\" name=\"login-submit\" id=\"login-submit\" tabindex=\"4\"\r\n                                                       class=\"form-control btn btn-login\" value=\"Log In\">\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-lg-12\">\r\n                                                <div class=\"text-center\">\r\n                                                    <a href=\"https://phpoll.com/recover\" tabindex=\"5\"\r\n                                                       class=\"forgot-password\">Forgot Password?</a>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </form>\r\n                                <form id=\"register-form\" action=\"https://phpoll.com/register/process\" method=\"post\"\r\n                                      role=\"form\" style=\"display: none;\">\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"text\" name=\"username\" id=\"username\" tabindex=\"1\"\r\n                                               class=\"form-control\" placeholder=\"Username\" value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control\"\r\n                                               placeholder=\"Email Address\" value=\"\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"password\" id=\"password\" tabindex=\"2\"\r\n                                               class=\"form-control\" placeholder=\"Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" name=\"confirm-password\" id=\"confirm-password\"\r\n                                               tabindex=\"2\" class=\"form-control\" placeholder=\"Confirm Password\">\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-sm-6 col-sm-offset-3\">\r\n                                                <input type=\"submit\" name=\"register-submit\" id=\"register-submit\"\r\n                                                       tabindex=\"4\" class=\"form-control btn btn-register\"\r\n                                                       value=\"Register Now\">\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n\r\n    import userModule from '../store/module/user.module'\r\n    export default {\r\n        props: [],\r\n        components: {},\r\n        data () {\r\n            return {}\r\n        },\r\n        computed: {\r\n            user: {\r\n                get () {\r\n                    console.log(\"on get\")\r\n                    return this.$store.state.userModule.nowUser\r\n                },\r\n                set (value) {\r\n                    console.log(\"on set\")\r\n                    this.$store.commit('setUser', value)\r\n                }\r\n                \r\n            }\r\n        },\r\n        methods: {},\r\n        created(){\r\n\r\n        },\r\n        mounted(){\r\n            $(function () {\r\n\r\n                $('#login-form-link').click(function (e) {\r\n                    $(\"#login-form\").delay(100).fadeIn(100);\r\n                    $(\"#register-form\").fadeOut(100);\r\n                    $('#register-form-link').removeClass('active');\r\n                    $(this).addClass('active');\r\n                    e.preventDefault();\r\n                });\r\n                $('#register-form-link').click(function (e) {\r\n                    $(\"#register-form\").delay(100).fadeIn(100);\r\n                    $(\"#login-form\").fadeOut(100);\r\n                    $('#login-form-link').removeClass('active');\r\n                    $(this).addClass('active');\r\n                    e.preventDefault();\r\n                });\r\n\r\n            });\r\n\r\n        },\r\n        updated(){\r\n        },\r\n        destroyed(){\r\n        }\r\n    }\r\n</script>\r\n\r\n<style scoped=\"\">\r\n    body {\r\n        padding-top: 90px;\r\n    }\r\n\r\n    .panel-login {\r\n        border-color: #ccc;\r\n        -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n        -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);\r\n    }\r\n\r\n    .panel-login > .panel-heading {\r\n        color: #00415d;\r\n        background-color: #fff;\r\n        border-color: #fff;\r\n        text-align: center;\r\n    }\r\n\r\n    .panel-login > .panel-heading a {\r\n        text-decoration: none;\r\n        color: #666;\r\n        font-weight: bold;\r\n        font-size: 15px;\r\n        -webkit-transition: all 0.1s linear;\r\n        -moz-transition: all 0.1s linear;\r\n        transition: all 0.1s linear;\r\n    }\r\n\r\n    .panel-login > .panel-heading a.active {\r\n        color: #029f5b;\r\n        font-size: 18px;\r\n    }\r\n\r\n    .panel-login > .panel-heading hr {\r\n        margin-top: 10px;\r\n        margin-bottom: 0px;\r\n        clear: both;\r\n        border: 0;\r\n        height: 1px;\r\n        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n        background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));\r\n    }\r\n\r\n    .panel-login input[type=\"text\"], .panel-login input[type=\"email\"], .panel-login input[type=\"password\"] {\r\n        height: 45px;\r\n        border: 1px solid #ddd;\r\n        font-size: 16px;\r\n        -webkit-transition: all 0.1s linear;\r\n        -moz-transition: all 0.1s linear;\r\n        transition: all 0.1s linear;\r\n    }\r\n\r\n    .panel-login input:hover,\r\n    .panel-login input:focus {\r\n        outline: none;\r\n        -webkit-box-shadow: none;\r\n        -moz-box-shadow: none;\r\n        box-shadow: none;\r\n        border-color: #ccc;\r\n    }\r\n\r\n    .btn-login {\r\n        background-color: #59B2E0;\r\n        outline: none;\r\n        color: #fff;\r\n        font-size: 14px;\r\n        height: auto;\r\n        font-weight: normal;\r\n        padding: 14px 0;\r\n        text-transform: uppercase;\r\n        border-color: #59B2E6;\r\n    }\r\n\r\n    .btn-login:hover,\r\n    .btn-login:focus {\r\n        color: #fff;\r\n        background-color: #53A3CD;\r\n        border-color: #53A3CD;\r\n    }\r\n\r\n    .forgot-password {\r\n        text-decoration: underline;\r\n        color: #888;\r\n    }\r\n\r\n    .forgot-password:hover,\r\n    .forgot-password:focus {\r\n        text-decoration: underline;\r\n        color: #666;\r\n    }\r\n\r\n    .btn-register {\r\n        background-color: #1CB94E;\r\n        outline: none;\r\n        color: #fff;\r\n        font-size: 14px;\r\n        height: auto;\r\n        font-weight: normal;\r\n        padding: 14px 0;\r\n        text-transform: uppercase;\r\n        border-color: #1CB94A;\r\n    }\r\n\r\n    .btn-register:hover,\r\n    .btn-register:focus {\r\n        color: #fff;\r\n        background-color: #1CA347;\r\n        border-color: #1CA347;\r\n    }\r\n\r\n</style>"],"sourceRoot":""}]);
 	
 	// exports
 
@@ -13294,96 +13294,12 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
 	
+	var _user = __webpack_require__(12);
+	
+	var _user2 = _interopRequireDefault(_user);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
 	    props: [],
@@ -13392,7 +13308,18 @@
 	        return {};
 	    },
 	
-	    computed: {},
+	    computed: {
+	        user: {
+	            get: function get() {
+	                console.log("on get");
+	                return this.$store.state.userModule.nowUser;
+	            },
+	            set: function set(value) {
+	                console.log("on set");
+	                this.$store.commit('setUser', value);
+	            }
+	        }
+	    },
 	    methods: {},
 	    created: function created() {},
 	    mounted: function mounted() {
@@ -13416,7 +13343,96 @@
 	    },
 	    updated: function updated() {},
 	    destroyed: function destroyed() {}
-	};
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
@@ -23243,9 +23259,1791 @@
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _mutations, _actions;
+	
+	var _UserService = __webpack_require__(13);
+	
+	var _UserService2 = _interopRequireDefault(_UserService);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
+	                                                                                                                                                                                                                   * Created by Adiel
+	                                                                                                                                                                                                                   */
+	
+	
+	var types = {
+	    LOGIN: "todo/login",
+	    REGISTER: "todo/register",
+	    REMOVE: "todo/remove",
+	    CREATE: "todo/create",
+	    UPDATE: "todo/update"
+	
+	};
+	var Service = new _UserService2.default();
+	
+	var state = {
+	    nowUser: {
+	        username: '',
+	        password: ''
+	    }
+	};
+	
+	var mutations = (_mutations = {}, _defineProperty(_mutations, types.LOGIN, function (state, user) {
+	    state.todos = todos;
+	}), _defineProperty(_mutations, types.REGISTER, function (state, user) {
+	    state.nowUser = user;
+	}), _defineProperty(_mutations, types.REMOVE, function (state, todo) {
+	    TodoService.removeFromArry(state.todos, todo);
+	}), _defineProperty(_mutations, types.CREATE, function (state, todo) {
+	    console.log(todo);
+	    state.todos.push(todo);
+	}), _defineProperty(_mutations, types.UPDATE, function (state, app) {
+	    TodoService.UpdateArrayById(state.todos, app);
+	}), _defineProperty(_mutations, "setUser", function setUser(state, user) {
+	    alert();
+	    state.nowUser = user;
+	}), _mutations);
+	
+	var actions = (_actions = {}, _defineProperty(_actions, types.LOGIN, function (context) {
+	    return Service.login().then(function (data) {
+	        context.commit(types.FETCH, data);
+	        return data;
+	    });
+	}), _defineProperty(_actions, types.REMOVE, function (context, todo) {
+	    return Service.remove(todo.id).then(function (data) {
+	        context.commit(types.REMOVE, todo);
+	        return data;
+	    });
+	}), _defineProperty(_actions, types.CREATE, function (context, todo) {
+	    return Service.create(todo).then(function (data) {
+	        if (data) {
+	            context.commit(types.CREATE, data.data);
+	        }
+	        return data;
+	    });
+	}), _defineProperty(_actions, types.UPDATE, function (context, todo) {
+	
+	    return Service.update(todo, todo.id).then(function (data) {
+	        if (data.success) {
+	            context.commit(types.UPDATE, todo);
+	        }
+	        return data;
+	    });
+	}), _actions);
+	exports.default = {
+	    state: state,
+	    actions: actions,
+	    mutations: mutations,
+	    types: types
+	
+	};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _BaseService2 = __webpack_require__(14);
+	
+	var _BaseService3 = _interopRequireDefault(_BaseService2);
+	
+	var _axios = __webpack_require__(15);
+	
+	var axios = _interopRequireWildcard(_axios);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LoginService = function (_BaseService) {
+	    _inherits(LoginService, _BaseService);
+	
+	    function LoginService() {
+	        _classCallCheck(this, LoginService);
+	
+	        return _possibleConstructorReturn(this, (LoginService.__proto__ || Object.getPrototypeOf(LoginService)).apply(this, arguments));
+	    }
+	
+	    _createClass(LoginService, [{
+	        key: "login",
+	        value: function login() {}
+	    }, {
+	        key: "className",
+	        get: function get() {
+	            return "users";
+	        }
+	    }]);
+	
+	    return LoginService;
+	}(_BaseService3.default);
+	
+	exports.default = LoginService;
+	;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _axios = __webpack_require__(15);
+	
+	var axios = _interopRequireWildcard(_axios);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	/**
+	 * Created by elad on 20 נובמבר 2016.
+	 */
+	
+	var BaseService = function () {
+	    function BaseService() {
+	        _classCallCheck(this, BaseService);
+	    }
+	
+	    _createClass(BaseService, [{
+	        key: 'create',
+	        value: function create(data) {
+	            return axios.post(this.className, data).then(function (response) {
+	                return response.data;
+	            });
+	        }
+	    }, {
+	        key: 'update',
+	        value: function update(data, id) {
+	            return axios.put(this.className + '/' + id, data).then(function (response) {
+	                return response.data;
+	            });
+	        }
+	    }, {
+	        key: 'fetch',
+	        value: function fetch() {
+	            var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	
+	            return axios.get(this.className, { params: params }).then(function (response) {
+	                return response.data;
+	            });
+	        }
+	    }, {
+	        key: 'get',
+	        value: function get(id) {
+	            var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	
+	            return axios.get(this.className + '/' + id).then(function (response) {
+	                if (response.data) {
+	                    return response.data;
+	                } else {
+	                    throw new Error(response.data);
+	                }
+	            });
+	        }
+	    }, {
+	        key: 'remove',
+	        value: function remove(id) {
+	            var dataUrl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	
+	            return axios.delete(this.className + '/' + id, dataUrl).then(function (response) {
+	                if (response.data) {
+	                    return response.data;
+	                } else {
+	                    throw new Error(response.data);
+	                }
+	            });
+	        }
+	
+	        // _errorFunction() {
+	        //
+	        // }
+	
+	        // get className() {
+	        //     return null;
+	        // }
+	
+	        // _getUrl(fun, id = null) {
+	        //     let url = this.className;
+	        //     if (id) {
+	        //         url += `&id=${id}`;
+	        //     }
+	        //     return url;
+	        // }
+	
+	    }], [{
+	        key: 'removeFromArry',
+	        value: function removeFromArry(arr, obj) {
+	            var index = arr.indexOf(obj);
+	            if (index > -1) {
+	                arr.splice(index, 1);
+	                return true;
+	            }
+	            return false;
+	        }
+	    }, {
+	        key: 'UpdateArray',
+	        value: function UpdateArray(arr, obj) {
+	            var index = arr.indexOf(obj);
+	            if (index > -1) {
+	                arr[index] = obj;
+	                return true;
+	            }
+	            return false;
+	        }
+	    }, {
+	        key: 'UpdateArrayById',
+	        value: function UpdateArrayById(arr, obj) {
+	            var founded = false;
+	            console.log(obj);
+	            arr.forEach(function (o) {
+	                console.log(o);
+	                if (o.id == obj.id) {
+	                    console.log(o, obj);
+	                    // console.log("founded")
+	                    // o = obj  ?
+	                    Object.assign(o, obj);
+	                    founded = true;
+	                    return founded;
+	                }
+	            });
+	            return founded;
+	        }
+	
+	        // fromDataToFd(data) {
+	        //     let fd = new FormData();
+	        //     for (var prop in data) {
+	        //         fd.append(prop, data[prop]);
+	        //     }
+	        //     return fd
+	        // }
+	
+	    }]);
+	
+	    return BaseService;
+	}();
+	
+	exports.default = BaseService;
+	;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(16);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	var bind = __webpack_require__(18);
+	var Axios = __webpack_require__(19);
+	var defaults = __webpack_require__(20);
+	
+	/**
+	 * Create an instance of Axios
+	 *
+	 * @param {Object} defaultConfig The default config for the instance
+	 * @return {Axios} A new instance of Axios
+	 */
+	function createInstance(defaultConfig) {
+	  var context = new Axios(defaultConfig);
+	  var instance = bind(Axios.prototype.request, context);
+	
+	  // Copy axios.prototype to instance
+	  utils.extend(instance, Axios.prototype, context);
+	
+	  // Copy context to instance
+	  utils.extend(instance, context);
+	
+	  return instance;
+	}
+	
+	// Create the default instance to be exported
+	var axios = createInstance(defaults);
+	
+	// Expose Axios class to allow class inheritance
+	axios.Axios = Axios;
+	
+	// Factory for creating new instances
+	axios.create = function create(instanceConfig) {
+	  return createInstance(utils.merge(defaults, instanceConfig));
+	};
+	
+	// Expose Cancel & CancelToken
+	axios.Cancel = __webpack_require__(37);
+	axios.CancelToken = __webpack_require__(38);
+	axios.isCancel = __webpack_require__(34);
+	
+	// Expose all/spread
+	axios.all = function all(promises) {
+	  return Promise.all(promises);
+	};
+	axios.spread = __webpack_require__(39);
+	
+	module.exports = axios;
+	
+	// Allow use of default import syntax in TypeScript
+	module.exports.default = axios;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var bind = __webpack_require__(18);
+	
+	/*global toString:true*/
+	
+	// utils is a library of generic helper functions non-specific to axios
+	
+	var toString = Object.prototype.toString;
+	
+	/**
+	 * Determine if a value is an Array
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Array, otherwise false
+	 */
+	function isArray(val) {
+	  return toString.call(val) === '[object Array]';
+	}
+	
+	/**
+	 * Determine if a value is an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+	 */
+	function isArrayBuffer(val) {
+	  return toString.call(val) === '[object ArrayBuffer]';
+	}
+	
+	/**
+	 * Determine if a value is a FormData
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an FormData, otherwise false
+	 */
+	function isFormData(val) {
+	  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+	}
+	
+	/**
+	 * Determine if a value is a view on an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+	 */
+	function isArrayBufferView(val) {
+	  var result;
+	  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+	    result = ArrayBuffer.isView(val);
+	  } else {
+	    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+	  }
+	  return result;
+	}
+	
+	/**
+	 * Determine if a value is a String
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a String, otherwise false
+	 */
+	function isString(val) {
+	  return typeof val === 'string';
+	}
+	
+	/**
+	 * Determine if a value is a Number
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Number, otherwise false
+	 */
+	function isNumber(val) {
+	  return typeof val === 'number';
+	}
+	
+	/**
+	 * Determine if a value is undefined
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if the value is undefined, otherwise false
+	 */
+	function isUndefined(val) {
+	  return typeof val === 'undefined';
+	}
+	
+	/**
+	 * Determine if a value is an Object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Object, otherwise false
+	 */
+	function isObject(val) {
+	  return val !== null && typeof val === 'object';
+	}
+	
+	/**
+	 * Determine if a value is a Date
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Date, otherwise false
+	 */
+	function isDate(val) {
+	  return toString.call(val) === '[object Date]';
+	}
+	
+	/**
+	 * Determine if a value is a File
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a File, otherwise false
+	 */
+	function isFile(val) {
+	  return toString.call(val) === '[object File]';
+	}
+	
+	/**
+	 * Determine if a value is a Blob
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Blob, otherwise false
+	 */
+	function isBlob(val) {
+	  return toString.call(val) === '[object Blob]';
+	}
+	
+	/**
+	 * Determine if a value is a Function
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Function, otherwise false
+	 */
+	function isFunction(val) {
+	  return toString.call(val) === '[object Function]';
+	}
+	
+	/**
+	 * Determine if a value is a Stream
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Stream, otherwise false
+	 */
+	function isStream(val) {
+	  return isObject(val) && isFunction(val.pipe);
+	}
+	
+	/**
+	 * Determine if a value is a URLSearchParams object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+	 */
+	function isURLSearchParams(val) {
+	  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+	}
+	
+	/**
+	 * Trim excess whitespace off the beginning and end of a string
+	 *
+	 * @param {String} str The String to trim
+	 * @returns {String} The String freed of excess whitespace
+	 */
+	function trim(str) {
+	  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+	}
+	
+	/**
+	 * Determine if we're running in a standard browser environment
+	 *
+	 * This allows axios to run in a web worker, and react-native.
+	 * Both environments support XMLHttpRequest, but not fully standard globals.
+	 *
+	 * web workers:
+	 *  typeof window -> undefined
+	 *  typeof document -> undefined
+	 *
+	 * react-native:
+	 *  typeof document.createElement -> undefined
+	 */
+	function isStandardBrowserEnv() {
+	  return (
+	    typeof window !== 'undefined' &&
+	    typeof document !== 'undefined' &&
+	    typeof document.createElement === 'function'
+	  );
+	}
+	
+	/**
+	 * Iterate over an Array or an Object invoking a function for each item.
+	 *
+	 * If `obj` is an Array callback will be called passing
+	 * the value, index, and complete array for each item.
+	 *
+	 * If 'obj' is an Object callback will be called passing
+	 * the value, key, and complete object for each property.
+	 *
+	 * @param {Object|Array} obj The object to iterate
+	 * @param {Function} fn The callback to invoke for each item
+	 */
+	function forEach(obj, fn) {
+	  // Don't bother if no value provided
+	  if (obj === null || typeof obj === 'undefined') {
+	    return;
+	  }
+	
+	  // Force an array if not already something iterable
+	  if (typeof obj !== 'object' && !isArray(obj)) {
+	    /*eslint no-param-reassign:0*/
+	    obj = [obj];
+	  }
+	
+	  if (isArray(obj)) {
+	    // Iterate over array values
+	    for (var i = 0, l = obj.length; i < l; i++) {
+	      fn.call(null, obj[i], i, obj);
+	    }
+	  } else {
+	    // Iterate over object keys
+	    for (var key in obj) {
+	      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+	        fn.call(null, obj[key], key, obj);
+	      }
+	    }
+	  }
+	}
+	
+	/**
+	 * Accepts varargs expecting each argument to be an object, then
+	 * immutably merges the properties of each object and returns result.
+	 *
+	 * When multiple objects contain the same key the later object in
+	 * the arguments list will take precedence.
+	 *
+	 * Example:
+	 *
+	 * ```js
+	 * var result = merge({foo: 123}, {foo: 456});
+	 * console.log(result.foo); // outputs 456
+	 * ```
+	 *
+	 * @param {Object} obj1 Object to merge
+	 * @returns {Object} Result of all merge properties
+	 */
+	function merge(/* obj1, obj2, obj3, ... */) {
+	  var result = {};
+	  function assignValue(val, key) {
+	    if (typeof result[key] === 'object' && typeof val === 'object') {
+	      result[key] = merge(result[key], val);
+	    } else {
+	      result[key] = val;
+	    }
+	  }
+	
+	  for (var i = 0, l = arguments.length; i < l; i++) {
+	    forEach(arguments[i], assignValue);
+	  }
+	  return result;
+	}
+	
+	/**
+	 * Extends object a by mutably adding to it the properties of object b.
+	 *
+	 * @param {Object} a The object to be extended
+	 * @param {Object} b The object to copy properties from
+	 * @param {Object} thisArg The object to bind function to
+	 * @return {Object} The resulting value of object a
+	 */
+	function extend(a, b, thisArg) {
+	  forEach(b, function assignValue(val, key) {
+	    if (thisArg && typeof val === 'function') {
+	      a[key] = bind(val, thisArg);
+	    } else {
+	      a[key] = val;
+	    }
+	  });
+	  return a;
+	}
+	
+	module.exports = {
+	  isArray: isArray,
+	  isArrayBuffer: isArrayBuffer,
+	  isFormData: isFormData,
+	  isArrayBufferView: isArrayBufferView,
+	  isString: isString,
+	  isNumber: isNumber,
+	  isObject: isObject,
+	  isUndefined: isUndefined,
+	  isDate: isDate,
+	  isFile: isFile,
+	  isBlob: isBlob,
+	  isFunction: isFunction,
+	  isStream: isStream,
+	  isURLSearchParams: isURLSearchParams,
+	  isStandardBrowserEnv: isStandardBrowserEnv,
+	  forEach: forEach,
+	  merge: merge,
+	  extend: extend,
+	  trim: trim
+	};
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function bind(fn, thisArg) {
+	  return function wrap() {
+	    var args = new Array(arguments.length);
+	    for (var i = 0; i < args.length; i++) {
+	      args[i] = arguments[i];
+	    }
+	    return fn.apply(thisArg, args);
+	  };
+	};
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var defaults = __webpack_require__(20);
+	var utils = __webpack_require__(17);
+	var InterceptorManager = __webpack_require__(31);
+	var dispatchRequest = __webpack_require__(32);
+	var isAbsoluteURL = __webpack_require__(35);
+	var combineURLs = __webpack_require__(36);
+	
+	/**
+	 * Create a new instance of Axios
+	 *
+	 * @param {Object} instanceConfig The default config for the instance
+	 */
+	function Axios(instanceConfig) {
+	  this.defaults = instanceConfig;
+	  this.interceptors = {
+	    request: new InterceptorManager(),
+	    response: new InterceptorManager()
+	  };
+	}
+	
+	/**
+	 * Dispatch a request
+	 *
+	 * @param {Object} config The config specific for this request (merged with this.defaults)
+	 */
+	Axios.prototype.request = function request(config) {
+	  /*eslint no-param-reassign:0*/
+	  // Allow for axios('example/url'[, config]) a la fetch API
+	  if (typeof config === 'string') {
+	    config = utils.merge({
+	      url: arguments[0]
+	    }, arguments[1]);
+	  }
+	
+	  config = utils.merge(defaults, this.defaults, { method: 'get' }, config);
+	
+	  // Support baseURL config
+	  if (config.baseURL && !isAbsoluteURL(config.url)) {
+	    config.url = combineURLs(config.baseURL, config.url);
+	  }
+	
+	  // Hook up interceptors middleware
+	  var chain = [dispatchRequest, undefined];
+	  var promise = Promise.resolve(config);
+	
+	  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+	    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+	  });
+	
+	  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+	    chain.push(interceptor.fulfilled, interceptor.rejected);
+	  });
+	
+	  while (chain.length) {
+	    promise = promise.then(chain.shift(), chain.shift());
+	  }
+	
+	  return promise;
+	};
+	
+	// Provide aliases for supported request methods
+	utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url
+	    }));
+	  };
+	});
+	
+	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, data, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url,
+	      data: data
+	    }));
+	  };
+	});
+	
+	module.exports = Axios;
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	
+	var utils = __webpack_require__(17);
+	var normalizeHeaderName = __webpack_require__(21);
+	
+	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
+	var DEFAULT_CONTENT_TYPE = {
+	  'Content-Type': 'application/x-www-form-urlencoded'
+	};
+	
+	function setContentTypeIfUnset(headers, value) {
+	  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+	    headers['Content-Type'] = value;
+	  }
+	}
+	
+	function getDefaultAdapter() {
+	  var adapter;
+	  if (typeof XMLHttpRequest !== 'undefined') {
+	    // For browsers use XHR adapter
+	    adapter = __webpack_require__(22);
+	  } else if (typeof process !== 'undefined') {
+	    // For node use HTTP adapter
+	    adapter = __webpack_require__(22);
+	  }
+	  return adapter;
+	}
+	
+	var defaults = {
+	  adapter: getDefaultAdapter(),
+	
+	  transformRequest: [function transformRequest(data, headers) {
+	    normalizeHeaderName(headers, 'Content-Type');
+	    if (utils.isFormData(data) ||
+	      utils.isArrayBuffer(data) ||
+	      utils.isStream(data) ||
+	      utils.isFile(data) ||
+	      utils.isBlob(data)
+	    ) {
+	      return data;
+	    }
+	    if (utils.isArrayBufferView(data)) {
+	      return data.buffer;
+	    }
+	    if (utils.isURLSearchParams(data)) {
+	      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+	      return data.toString();
+	    }
+	    if (utils.isObject(data)) {
+	      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+	      return JSON.stringify(data);
+	    }
+	    return data;
+	  }],
+	
+	  transformResponse: [function transformResponse(data) {
+	    /*eslint no-param-reassign:0*/
+	    if (typeof data === 'string') {
+	      data = data.replace(PROTECTION_PREFIX, '');
+	      try {
+	        data = JSON.parse(data);
+	      } catch (e) { /* Ignore */ }
+	    }
+	    return data;
+	  }],
+	
+	  timeout: 0,
+	
+	  xsrfCookieName: 'XSRF-TOKEN',
+	  xsrfHeaderName: 'X-XSRF-TOKEN',
+	
+	  maxContentLength: -1,
+	
+	  validateStatus: function validateStatus(status) {
+	    return status >= 200 && status < 300;
+	  }
+	};
+	
+	defaults.headers = {
+	  common: {
+	    'Accept': 'application/json, text/plain, */*'
+	  }
+	};
+	
+	utils.forEach(['delete', 'get', 'head'], function forEachMehtodNoData(method) {
+	  defaults.headers[method] = {};
+	});
+	
+	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+	  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+	});
+	
+	module.exports = defaults;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	module.exports = function normalizeHeaderName(headers, normalizedName) {
+	  utils.forEach(headers, function processHeader(value, name) {
+	    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+	      headers[normalizedName] = value;
+	      delete headers[name];
+	    }
+	  });
+	};
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	
+	var utils = __webpack_require__(17);
+	var settle = __webpack_require__(23);
+	var buildURL = __webpack_require__(26);
+	var parseHeaders = __webpack_require__(27);
+	var isURLSameOrigin = __webpack_require__(28);
+	var createError = __webpack_require__(24);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(29);
+	
+	module.exports = function xhrAdapter(config) {
+	  return new Promise(function dispatchXhrRequest(resolve, reject) {
+	    var requestData = config.data;
+	    var requestHeaders = config.headers;
+	
+	    if (utils.isFormData(requestData)) {
+	      delete requestHeaders['Content-Type']; // Let the browser set it
+	    }
+	
+	    var request = new XMLHttpRequest();
+	    var loadEvent = 'onreadystatechange';
+	    var xDomain = false;
+	
+	    // For IE 8/9 CORS support
+	    // Only supports POST and GET calls and doesn't returns the response headers.
+	    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
+	    if (process.env.NODE_ENV !== 'test' &&
+	        typeof window !== 'undefined' &&
+	        window.XDomainRequest && !('withCredentials' in request) &&
+	        !isURLSameOrigin(config.url)) {
+	      request = new window.XDomainRequest();
+	      loadEvent = 'onload';
+	      xDomain = true;
+	      request.onprogress = function handleProgress() {};
+	      request.ontimeout = function handleTimeout() {};
+	    }
+	
+	    // HTTP basic authentication
+	    if (config.auth) {
+	      var username = config.auth.username || '';
+	      var password = config.auth.password || '';
+	      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+	    }
+	
+	    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+	
+	    // Set the request timeout in MS
+	    request.timeout = config.timeout;
+	
+	    // Listen for ready state
+	    request[loadEvent] = function handleLoad() {
+	      if (!request || (request.readyState !== 4 && !xDomain)) {
+	        return;
+	      }
+	
+	      // The request errored out and we didn't get a response, this will be
+	      // handled by onerror instead
+	      // With one exception: request that using file: protocol, most browsers
+	      // will return status as 0 even though it's a successful request
+	      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+	        return;
+	      }
+	
+	      // Prepare the response
+	      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+	      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+	      var response = {
+	        data: responseData,
+	        // IE sends 1223 instead of 204 (https://github.com/mzabriskie/axios/issues/201)
+	        status: request.status === 1223 ? 204 : request.status,
+	        statusText: request.status === 1223 ? 'No Content' : request.statusText,
+	        headers: responseHeaders,
+	        config: config,
+	        request: request
+	      };
+	
+	      settle(resolve, reject, response);
+	
+	      // Clean up request
+	      request = null;
+	    };
+	
+	    // Handle low level network errors
+	    request.onerror = function handleError() {
+	      // Real errors are hidden from us by the browser
+	      // onerror should only fire if it's a network error
+	      reject(createError('Network Error', config));
+	
+	      // Clean up request
+	      request = null;
+	    };
+	
+	    // Handle timeout
+	    request.ontimeout = function handleTimeout() {
+	      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED'));
+	
+	      // Clean up request
+	      request = null;
+	    };
+	
+	    // Add xsrf header
+	    // This is only done if running in a standard browser environment.
+	    // Specifically not if we're in a web worker, or react-native.
+	    if (utils.isStandardBrowserEnv()) {
+	      var cookies = __webpack_require__(30);
+	
+	      // Add xsrf header
+	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+	          cookies.read(config.xsrfCookieName) :
+	          undefined;
+	
+	      if (xsrfValue) {
+	        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+	      }
+	    }
+	
+	    // Add headers to the request
+	    if ('setRequestHeader' in request) {
+	      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+	        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+	          // Remove Content-Type if data is undefined
+	          delete requestHeaders[key];
+	        } else {
+	          // Otherwise add header to the request
+	          request.setRequestHeader(key, val);
+	        }
+	      });
+	    }
+	
+	    // Add withCredentials to request if needed
+	    if (config.withCredentials) {
+	      request.withCredentials = true;
+	    }
+	
+	    // Add responseType to request if needed
+	    if (config.responseType) {
+	      try {
+	        request.responseType = config.responseType;
+	      } catch (e) {
+	        if (request.responseType !== 'json') {
+	          throw e;
+	        }
+	      }
+	    }
+	
+	    // Handle progress if needed
+	    if (typeof config.onDownloadProgress === 'function') {
+	      request.addEventListener('progress', config.onDownloadProgress);
+	    }
+	
+	    // Not all browsers support upload events
+	    if (typeof config.onUploadProgress === 'function' && request.upload) {
+	      request.upload.addEventListener('progress', config.onUploadProgress);
+	    }
+	
+	    if (config.cancelToken) {
+	      // Handle cancellation
+	      config.cancelToken.promise.then(function onCanceled(cancel) {
+	        if (!request) {
+	          return;
+	        }
+	
+	        request.abort();
+	        reject(cancel);
+	        // Clean up request
+	        request = null;
+	      });
+	    }
+	
+	    if (requestData === undefined) {
+	      requestData = null;
+	    }
+	
+	    // Send the request
+	    request.send(requestData);
+	  });
+	};
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var createError = __webpack_require__(24);
+	
+	/**
+	 * Resolve or reject a Promise based on response status.
+	 *
+	 * @param {Function} resolve A function that resolves the promise.
+	 * @param {Function} reject A function that rejects the promise.
+	 * @param {object} response The response.
+	 */
+	module.exports = function settle(resolve, reject, response) {
+	  var validateStatus = response.config.validateStatus;
+	  // Note: status is not exposed by XDomainRequest
+	  if (!response.status || !validateStatus || validateStatus(response.status)) {
+	    resolve(response);
+	  } else {
+	    reject(createError(
+	      'Request failed with status code ' + response.status,
+	      response.config,
+	      null,
+	      response
+	    ));
+	  }
+	};
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var enhanceError = __webpack_require__(25);
+	
+	/**
+	 * Create an Error with the specified message, config, error code, and response.
+	 *
+	 * @param {string} message The error message.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The created error.
+	 */
+	module.exports = function createError(message, config, code, response) {
+	  var error = new Error(message);
+	  return enhanceError(error, config, code, response);
+	};
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * Update an Error with the specified config, error code, and response.
+	 *
+	 * @param {Error} error The error to update.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The error.
+	 */
+	module.exports = function enhanceError(error, config, code, response) {
+	  error.config = config;
+	  if (code) {
+	    error.code = code;
+	  }
+	  error.response = response;
+	  return error;
+	};
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	function encode(val) {
+	  return encodeURIComponent(val).
+	    replace(/%40/gi, '@').
+	    replace(/%3A/gi, ':').
+	    replace(/%24/g, '$').
+	    replace(/%2C/gi, ',').
+	    replace(/%20/g, '+').
+	    replace(/%5B/gi, '[').
+	    replace(/%5D/gi, ']');
+	}
+	
+	/**
+	 * Build a URL by appending params to the end
+	 *
+	 * @param {string} url The base of the url (e.g., http://www.google.com)
+	 * @param {object} [params] The params to be appended
+	 * @returns {string} The formatted url
+	 */
+	module.exports = function buildURL(url, params, paramsSerializer) {
+	  /*eslint no-param-reassign:0*/
+	  if (!params) {
+	    return url;
+	  }
+	
+	  var serializedParams;
+	  if (paramsSerializer) {
+	    serializedParams = paramsSerializer(params);
+	  } else if (utils.isURLSearchParams(params)) {
+	    serializedParams = params.toString();
+	  } else {
+	    var parts = [];
+	
+	    utils.forEach(params, function serialize(val, key) {
+	      if (val === null || typeof val === 'undefined') {
+	        return;
+	      }
+	
+	      if (utils.isArray(val)) {
+	        key = key + '[]';
+	      }
+	
+	      if (!utils.isArray(val)) {
+	        val = [val];
+	      }
+	
+	      utils.forEach(val, function parseValue(v) {
+	        if (utils.isDate(v)) {
+	          v = v.toISOString();
+	        } else if (utils.isObject(v)) {
+	          v = JSON.stringify(v);
+	        }
+	        parts.push(encode(key) + '=' + encode(v));
+	      });
+	    });
+	
+	    serializedParams = parts.join('&');
+	  }
+	
+	  if (serializedParams) {
+	    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+	  }
+	
+	  return url;
+	};
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	/**
+	 * Parse headers into an object
+	 *
+	 * ```
+	 * Date: Wed, 27 Aug 2014 08:58:49 GMT
+	 * Content-Type: application/json
+	 * Connection: keep-alive
+	 * Transfer-Encoding: chunked
+	 * ```
+	 *
+	 * @param {String} headers Headers needing to be parsed
+	 * @returns {Object} Headers parsed into an object
+	 */
+	module.exports = function parseHeaders(headers) {
+	  var parsed = {};
+	  var key;
+	  var val;
+	  var i;
+	
+	  if (!headers) { return parsed; }
+	
+	  utils.forEach(headers.split('\n'), function parser(line) {
+	    i = line.indexOf(':');
+	    key = utils.trim(line.substr(0, i)).toLowerCase();
+	    val = utils.trim(line.substr(i + 1));
+	
+	    if (key) {
+	      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+	    }
+	  });
+	
+	  return parsed;
+	};
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+	
+	  // Standard browser envs have full support of the APIs needed to test
+	  // whether the request URL is of the same origin as current location.
+	  (function standardBrowserEnv() {
+	    var msie = /(msie|trident)/i.test(navigator.userAgent);
+	    var urlParsingNode = document.createElement('a');
+	    var originURL;
+	
+	    /**
+	    * Parse a URL to discover it's components
+	    *
+	    * @param {String} url The URL to be parsed
+	    * @returns {Object}
+	    */
+	    function resolveURL(url) {
+	      var href = url;
+	
+	      if (msie) {
+	        // IE needs attribute set twice to normalize properties
+	        urlParsingNode.setAttribute('href', href);
+	        href = urlParsingNode.href;
+	      }
+	
+	      urlParsingNode.setAttribute('href', href);
+	
+	      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+	      return {
+	        href: urlParsingNode.href,
+	        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+	        host: urlParsingNode.host,
+	        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+	        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+	        hostname: urlParsingNode.hostname,
+	        port: urlParsingNode.port,
+	        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+	                  urlParsingNode.pathname :
+	                  '/' + urlParsingNode.pathname
+	      };
+	    }
+	
+	    originURL = resolveURL(window.location.href);
+	
+	    /**
+	    * Determine if a URL shares the same origin as the current location
+	    *
+	    * @param {String} requestURL The URL to test
+	    * @returns {boolean} True if URL shares the same origin, otherwise false
+	    */
+	    return function isURLSameOrigin(requestURL) {
+	      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+	      return (parsed.protocol === originURL.protocol &&
+	            parsed.host === originURL.host);
+	    };
+	  })() :
+	
+	  // Non standard browser envs (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return function isURLSameOrigin() {
+	      return true;
+	    };
+	  })()
+	);
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
+	
+	var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+	
+	function E() {
+	  this.message = 'String contains an invalid character';
+	}
+	E.prototype = new Error;
+	E.prototype.code = 5;
+	E.prototype.name = 'InvalidCharacterError';
+	
+	function btoa(input) {
+	  var str = String(input);
+	  var output = '';
+	  for (
+	    // initialize result and counter
+	    var block, charCode, idx = 0, map = chars;
+	    // if the next str index does not exist:
+	    //   change the mapping table to "="
+	    //   check if d has no fractional digits
+	    str.charAt(idx | 0) || (map = '=', idx % 1);
+	    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+	    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+	  ) {
+	    charCode = str.charCodeAt(idx += 3 / 4);
+	    if (charCode > 0xFF) {
+	      throw new E();
+	    }
+	    block = block << 8 | charCode;
+	  }
+	  return output;
+	}
+	
+	module.exports = btoa;
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+	
+	  // Standard browser envs support document.cookie
+	  (function standardBrowserEnv() {
+	    return {
+	      write: function write(name, value, expires, path, domain, secure) {
+	        var cookie = [];
+	        cookie.push(name + '=' + encodeURIComponent(value));
+	
+	        if (utils.isNumber(expires)) {
+	          cookie.push('expires=' + new Date(expires).toGMTString());
+	        }
+	
+	        if (utils.isString(path)) {
+	          cookie.push('path=' + path);
+	        }
+	
+	        if (utils.isString(domain)) {
+	          cookie.push('domain=' + domain);
+	        }
+	
+	        if (secure === true) {
+	          cookie.push('secure');
+	        }
+	
+	        document.cookie = cookie.join('; ');
+	      },
+	
+	      read: function read(name) {
+	        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+	        return (match ? decodeURIComponent(match[3]) : null);
+	      },
+	
+	      remove: function remove(name) {
+	        this.write(name, '', Date.now() - 86400000);
+	      }
+	    };
+	  })() :
+	
+	  // Non standard browser env (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return {
+	      write: function write() {},
+	      read: function read() { return null; },
+	      remove: function remove() {}
+	    };
+	  })()
+	);
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	function InterceptorManager() {
+	  this.handlers = [];
+	}
+	
+	/**
+	 * Add a new interceptor to the stack
+	 *
+	 * @param {Function} fulfilled The function to handle `then` for a `Promise`
+	 * @param {Function} rejected The function to handle `reject` for a `Promise`
+	 *
+	 * @return {Number} An ID used to remove interceptor later
+	 */
+	InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+	  this.handlers.push({
+	    fulfilled: fulfilled,
+	    rejected: rejected
+	  });
+	  return this.handlers.length - 1;
+	};
+	
+	/**
+	 * Remove an interceptor from the stack
+	 *
+	 * @param {Number} id The ID that was returned by `use`
+	 */
+	InterceptorManager.prototype.eject = function eject(id) {
+	  if (this.handlers[id]) {
+	    this.handlers[id] = null;
+	  }
+	};
+	
+	/**
+	 * Iterate over all the registered interceptors
+	 *
+	 * This method is particularly useful for skipping over any
+	 * interceptors that may have become `null` calling `eject`.
+	 *
+	 * @param {Function} fn The function to call for each interceptor
+	 */
+	InterceptorManager.prototype.forEach = function forEach(fn) {
+	  utils.forEach(this.handlers, function forEachHandler(h) {
+	    if (h !== null) {
+	      fn(h);
+	    }
+	  });
+	};
+	
+	module.exports = InterceptorManager;
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	var transformData = __webpack_require__(33);
+	var isCancel = __webpack_require__(34);
+	var defaults = __webpack_require__(20);
+	
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	function throwIfCancellationRequested(config) {
+	  if (config.cancelToken) {
+	    config.cancelToken.throwIfRequested();
+	  }
+	}
+	
+	/**
+	 * Dispatch a request to the server using the configured adapter.
+	 *
+	 * @param {object} config The config that is to be used for the request
+	 * @returns {Promise} The Promise to be fulfilled
+	 */
+	module.exports = function dispatchRequest(config) {
+	  throwIfCancellationRequested(config);
+	
+	  // Ensure headers exist
+	  config.headers = config.headers || {};
+	
+	  // Transform request data
+	  config.data = transformData(
+	    config.data,
+	    config.headers,
+	    config.transformRequest
+	  );
+	
+	  // Flatten headers
+	  config.headers = utils.merge(
+	    config.headers.common || {},
+	    config.headers[config.method] || {},
+	    config.headers || {}
+	  );
+	
+	  utils.forEach(
+	    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+	    function cleanHeaderConfig(method) {
+	      delete config.headers[method];
+	    }
+	  );
+	
+	  var adapter = config.adapter || defaults.adapter;
+	
+	  return adapter(config).then(function onAdapterResolution(response) {
+	    throwIfCancellationRequested(config);
+	
+	    // Transform response data
+	    response.data = transformData(
+	      response.data,
+	      response.headers,
+	      config.transformResponse
+	    );
+	
+	    return response;
+	  }, function onAdapterRejection(reason) {
+	    if (!isCancel(reason)) {
+	      throwIfCancellationRequested(config);
+	
+	      // Transform response data
+	      if (reason && reason.response) {
+	        reason.response.data = transformData(
+	          reason.response.data,
+	          reason.response.headers,
+	          config.transformResponse
+	        );
+	      }
+	    }
+	
+	    return Promise.reject(reason);
+	  });
+	};
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var utils = __webpack_require__(17);
+	
+	/**
+	 * Transform the data for a request or a response
+	 *
+	 * @param {Object|String} data The data to be transformed
+	 * @param {Array} headers The headers for the request or response
+	 * @param {Array|Function} fns A single function or Array of functions
+	 * @returns {*} The resulting transformed data
+	 */
+	module.exports = function transformData(data, headers, fns) {
+	  /*eslint no-param-reassign:0*/
+	  utils.forEach(fns, function transform(fn) {
+	    data = fn(data, headers);
+	  });
+	
+	  return data;
+	};
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function isCancel(value) {
+	  return !!(value && value.__CANCEL__);
+	};
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * Determines whether the specified URL is absolute
+	 *
+	 * @param {string} url The URL to test
+	 * @returns {boolean} True if the specified URL is absolute, otherwise false
+	 */
+	module.exports = function isAbsoluteURL(url) {
+	  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+	  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+	  // by any combination of letters, digits, plus, period, or hyphen.
+	  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+	};
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * Creates a new URL by combining the specified URLs
+	 *
+	 * @param {string} baseURL The base URL
+	 * @param {string} relativeURL The relative URL
+	 * @returns {string} The combined URL
+	 */
+	module.exports = function combineURLs(baseURL, relativeURL) {
+	  return baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
+	};
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * A `Cancel` is an object that is thrown when an operation is canceled.
+	 *
+	 * @class
+	 * @param {string=} message The message.
+	 */
+	function Cancel(message) {
+	  this.message = message;
+	}
+	
+	Cancel.prototype.toString = function toString() {
+	  return 'Cancel' + (this.message ? ': ' + this.message : '');
+	};
+	
+	Cancel.prototype.__CANCEL__ = true;
+	
+	module.exports = Cancel;
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var Cancel = __webpack_require__(37);
+	
+	/**
+	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
+	 *
+	 * @class
+	 * @param {Function} executor The executor function.
+	 */
+	function CancelToken(executor) {
+	  if (typeof executor !== 'function') {
+	    throw new TypeError('executor must be a function.');
+	  }
+	
+	  var resolvePromise;
+	  this.promise = new Promise(function promiseExecutor(resolve) {
+	    resolvePromise = resolve;
+	  });
+	
+	  var token = this;
+	  executor(function cancel(message) {
+	    if (token.reason) {
+	      // Cancellation has already been requested
+	      return;
+	    }
+	
+	    token.reason = new Cancel(message);
+	    resolvePromise(token.reason);
+	  });
+	}
+	
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+	  if (this.reason) {
+	    throw this.reason;
+	  }
+	};
+	
+	/**
+	 * Returns an object that contains a new `CancelToken` and a function that, when called,
+	 * cancels the `CancelToken`.
+	 */
+	CancelToken.source = function source() {
+	  var cancel;
+	  var token = new CancelToken(function executor(c) {
+	    cancel = c;
+	  });
+	  return {
+	    token: token,
+	    cancel: cancel
+	  };
+	};
+	
+	module.exports = CancelToken;
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * Syntactic sugar for invoking a function and expanding an array for arguments.
+	 *
+	 * Common use case would be to use `Function.prototype.apply`.
+	 *
+	 *  ```js
+	 *  function f(x, y, z) {}
+	 *  var args = [1, 2, 3];
+	 *  f.apply(null, args);
+	 *  ```
+	 *
+	 * With `spread` this example can be re-written.
+	 *
+	 *  ```js
+	 *  spread(function(x, y, z) {})([1, 2, 3]);
+	 *  ```
+	 *
+	 * @param {Function} callback
+	 * @returns {Function}
+	 */
+	module.exports = function spread(callback) {
+	  return function wrap(arr) {
+	    return callback.apply(null, arr);
+	  };
+	};
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "container"
 	  }, [_c('div', {
@@ -23254,7 +25052,74 @@
 	    staticClass: "col-md-6 col-md-offset-3"
 	  }, [_c('div', {
 	    staticClass: "panel panel-login"
+	  }, [_vm._m(0), _vm._v(" "), _c('div', {
+	    staticClass: "panel-body"
 	  }, [_c('div', {
+	    staticClass: "row"
+	  }, [_c('div', {
+	    staticClass: "col-lg-12"
+	  }, [_c('form', {
+	    staticStyle: {
+	      "display": "block"
+	    },
+	    attrs: {
+	      "id": "login-form",
+	      "role": "form"
+	    }
+	  }, [_c('div', {
+	    staticClass: "form-group"
+	  }, [_c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.user.username),
+	      expression: "user.username"
+	    }],
+	    staticClass: "form-control",
+	    attrs: {
+	      "type": "text",
+	      "name": "username",
+	      "tabindex": "1",
+	      "placeholder": "Username",
+	      "value": ""
+	    },
+	    domProps: {
+	      "value": (_vm.user.username)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.user.username = $event.target.value
+	      }
+	    }
+	  })]), _vm._v(" "), _c('div', {
+	    staticClass: "form-group"
+	  }, [_c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.user.password),
+	      expression: "user.password"
+	    }],
+	    staticClass: "form-control",
+	    attrs: {
+	      "type": "password",
+	      "name": "password",
+	      "tabindex": "2",
+	      "placeholder": "Password"
+	    },
+	    domProps: {
+	      "value": (_vm.user.password)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.user.password = $event.target.value
+	      }
+	    }
+	  })]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)]), _vm._v(" "), _vm._m(4)])])])])])])])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    staticClass: "panel-heading"
 	  }, [_c('div', {
 	    staticClass: "row"
@@ -23273,46 +25138,9 @@
 	      "href": "#",
 	      "id": "register-form-link"
 	    }
-	  }, [_vm._v("Register")])])]), _vm._v(" "), _c('hr')]), _vm._v(" "), _c('div', {
-	    staticClass: "panel-body"
-	  }, [_c('div', {
-	    staticClass: "row"
-	  }, [_c('div', {
-	    staticClass: "col-lg-12"
-	  }, [_c('form', {
-	    staticStyle: {
-	      "display": "block"
-	    },
-	    attrs: {
-	      "id": "login-form",
-	      "action": "https://phpoll.com/login/process",
-	      "method": "post",
-	      "role": "form"
-	    }
-	  }, [_c('div', {
-	    staticClass: "form-group"
-	  }, [_c('input', {
-	    staticClass: "form-control",
-	    attrs: {
-	      "type": "text",
-	      "name": "username",
-	      "id": "username",
-	      "tabindex": "1",
-	      "placeholder": "Username",
-	      "value": ""
-	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "form-group"
-	  }, [_c('input', {
-	    staticClass: "form-control",
-	    attrs: {
-	      "type": "password",
-	      "name": "password",
-	      "id": "password",
-	      "tabindex": "2",
-	      "placeholder": "Password"
-	    }
-	  })]), _vm._v(" "), _c('div', {
+	  }, [_vm._v("Register")])])]), _vm._v(" "), _c('hr')])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    staticClass: "form-group text-center"
 	  }, [_c('input', {
 	    attrs: {
@@ -23325,7 +25153,9 @@
 	    attrs: {
 	      "for": "remember"
 	    }
-	  }, [_vm._v(" Remember Me")])]), _vm._v(" "), _c('div', {
+	  }, [_vm._v(" Remember Me")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    staticClass: "form-group"
 	  }, [_c('div', {
 	    staticClass: "row"
@@ -23340,7 +25170,9 @@
 	      "tabindex": "4",
 	      "value": "Log In"
 	    }
-	  })])])]), _vm._v(" "), _c('div', {
+	  })])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    staticClass: "form-group"
 	  }, [_c('div', {
 	    staticClass: "row"
@@ -23354,7 +25186,9 @@
 	      "href": "https://phpoll.com/recover",
 	      "tabindex": "5"
 	    }
-	  }, [_vm._v("Forgot Password?")])])])])])]), _vm._v(" "), _c('form', {
+	  }, [_vm._v("Forgot Password?")])])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('form', {
 	    staticStyle: {
 	      "display": "none"
 	    },
@@ -23425,7 +25259,7 @@
 	      "tabindex": "4",
 	      "value": "Register Now"
 	    }
-	  })])])])])])])])])])])])
+	  })])])])])
 	}]}
 	if (false) {
 	  module.hot.accept()
@@ -23435,20 +25269,20 @@
 	}
 
 /***/ }),
-/* 13 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 	
 	/* styles */
-	__webpack_require__(14)
+	__webpack_require__(42)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(16)
+	__vue_exports__ = __webpack_require__(44)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(51)
+	var __vue_template__ = __webpack_require__(53)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -23483,13 +25317,13 @@
 
 
 /***/ }),
-/* 14 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(15);
+	var content = __webpack_require__(43);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(9)(content, {});
@@ -23509,7 +25343,7 @@
 	}
 
 /***/ }),
-/* 15 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -23523,7 +25357,7 @@
 
 
 /***/ }),
-/* 16 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23532,11 +25366,11 @@
 	    value: true
 	});
 	
-	var _izitoast = __webpack_require__(17);
+	var _izitoast = __webpack_require__(45);
 	
 	var _izitoast2 = _interopRequireDefault(_izitoast);
 	
-	var _todo = __webpack_require__(18);
+	var _todo = __webpack_require__(46);
 	
 	var _todo2 = _interopRequireDefault(_todo);
 	
@@ -23590,7 +25424,7 @@
 	    props: [],
 	
 	    components: {
-	        Todo: __webpack_require__(46)
+	        Todo: __webpack_require__(48)
 	    },
 	    data: function data() {
 	        return {
@@ -23631,7 +25465,7 @@
 	};
 
 /***/ }),
-/* 17 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*
@@ -24549,7 +26383,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 18 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24560,7 +26394,7 @@
 	
 	var _mutations, _actions;
 	
-	var _TodoService = __webpack_require__(19);
+	var _TodoService = __webpack_require__(47);
 	
 	var _TodoService2 = _interopRequireDefault(_TodoService);
 	
@@ -24630,7 +26464,7 @@
 	};
 
 /***/ }),
-/* 19 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24641,11 +26475,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _BaseService2 = __webpack_require__(20);
+	var _BaseService2 = __webpack_require__(14);
 	
 	var _BaseService3 = _interopRequireDefault(_BaseService2);
 	
-	var _axios = __webpack_require__(21);
+	var _axios = __webpack_require__(15);
 	
 	var axios = _interopRequireWildcard(_axios);
 	
@@ -24682,1659 +26516,20 @@
 	;
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _axios = __webpack_require__(21);
-	
-	var axios = _interopRequireWildcard(_axios);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	/**
-	 * Created by elad on 20 נובמבר 2016.
-	 */
-	
-	var BaseService = function () {
-	    function BaseService() {
-	        _classCallCheck(this, BaseService);
-	    }
-	
-	    _createClass(BaseService, [{
-	        key: 'create',
-	        value: function create(data) {
-	            return axios.post(this.className, data).then(function (response) {
-	                return response.data;
-	            });
-	        }
-	    }, {
-	        key: 'update',
-	        value: function update(data, id) {
-	            return axios.put(this.className + '/' + id, data).then(function (response) {
-	                return response.data;
-	            });
-	        }
-	    }, {
-	        key: 'fetch',
-	        value: function fetch() {
-	            var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-	
-	            return axios.get(this.className, { params: params }).then(function (response) {
-	                return response.data;
-	            });
-	        }
-	    }, {
-	        key: 'get',
-	        value: function get(id) {
-	            var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	
-	            return axios.get(this.className + '/' + id).then(function (response) {
-	                if (response.data) {
-	                    return response.data;
-	                } else {
-	                    throw new Error(response.data);
-	                }
-	            });
-	        }
-	    }, {
-	        key: 'remove',
-	        value: function remove(id) {
-	            var dataUrl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	
-	            return axios.delete(this.className + '/' + id, dataUrl).then(function (response) {
-	                if (response.data) {
-	                    return response.data;
-	                } else {
-	                    throw new Error(response.data);
-	                }
-	            });
-	        }
-	
-	        // _errorFunction() {
-	        //
-	        // }
-	
-	        // get className() {
-	        //     return null;
-	        // }
-	
-	        // _getUrl(fun, id = null) {
-	        //     let url = this.className;
-	        //     if (id) {
-	        //         url += `&id=${id}`;
-	        //     }
-	        //     return url;
-	        // }
-	
-	    }], [{
-	        key: 'removeFromArry',
-	        value: function removeFromArry(arr, obj) {
-	            var index = arr.indexOf(obj);
-	            if (index > -1) {
-	                arr.splice(index, 1);
-	                return true;
-	            }
-	            return false;
-	        }
-	    }, {
-	        key: 'UpdateArray',
-	        value: function UpdateArray(arr, obj) {
-	            var index = arr.indexOf(obj);
-	            if (index > -1) {
-	                arr[index] = obj;
-	                return true;
-	            }
-	            return false;
-	        }
-	    }, {
-	        key: 'UpdateArrayById',
-	        value: function UpdateArrayById(arr, obj) {
-	            var founded = false;
-	            console.log(obj);
-	            arr.forEach(function (o) {
-	                console.log(o);
-	                if (o.id == obj.id) {
-	                    console.log(o, obj);
-	                    // console.log("founded")
-	                    // o = obj  ?
-	                    Object.assign(o, obj);
-	                    founded = true;
-	                    return founded;
-	                }
-	            });
-	            return founded;
-	        }
-	
-	        // fromDataToFd(data) {
-	        //     let fd = new FormData();
-	        //     for (var prop in data) {
-	        //         fd.append(prop, data[prop]);
-	        //     }
-	        //     return fd
-	        // }
-	
-	    }]);
-	
-	    return BaseService;
-	}();
-	
-	exports.default = BaseService;
-	;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(22);
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	var bind = __webpack_require__(24);
-	var Axios = __webpack_require__(25);
-	var defaults = __webpack_require__(26);
-	
-	/**
-	 * Create an instance of Axios
-	 *
-	 * @param {Object} defaultConfig The default config for the instance
-	 * @return {Axios} A new instance of Axios
-	 */
-	function createInstance(defaultConfig) {
-	  var context = new Axios(defaultConfig);
-	  var instance = bind(Axios.prototype.request, context);
-	
-	  // Copy axios.prototype to instance
-	  utils.extend(instance, Axios.prototype, context);
-	
-	  // Copy context to instance
-	  utils.extend(instance, context);
-	
-	  return instance;
-	}
-	
-	// Create the default instance to be exported
-	var axios = createInstance(defaults);
-	
-	// Expose Axios class to allow class inheritance
-	axios.Axios = Axios;
-	
-	// Factory for creating new instances
-	axios.create = function create(instanceConfig) {
-	  return createInstance(utils.merge(defaults, instanceConfig));
-	};
-	
-	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(43);
-	axios.CancelToken = __webpack_require__(44);
-	axios.isCancel = __webpack_require__(40);
-	
-	// Expose all/spread
-	axios.all = function all(promises) {
-	  return Promise.all(promises);
-	};
-	axios.spread = __webpack_require__(45);
-	
-	module.exports = axios;
-	
-	// Allow use of default import syntax in TypeScript
-	module.exports.default = axios;
-
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var bind = __webpack_require__(24);
-	
-	/*global toString:true*/
-	
-	// utils is a library of generic helper functions non-specific to axios
-	
-	var toString = Object.prototype.toString;
-	
-	/**
-	 * Determine if a value is an Array
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is an Array, otherwise false
-	 */
-	function isArray(val) {
-	  return toString.call(val) === '[object Array]';
-	}
-	
-	/**
-	 * Determine if a value is an ArrayBuffer
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is an ArrayBuffer, otherwise false
-	 */
-	function isArrayBuffer(val) {
-	  return toString.call(val) === '[object ArrayBuffer]';
-	}
-	
-	/**
-	 * Determine if a value is a FormData
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is an FormData, otherwise false
-	 */
-	function isFormData(val) {
-	  return (typeof FormData !== 'undefined') && (val instanceof FormData);
-	}
-	
-	/**
-	 * Determine if a value is a view on an ArrayBuffer
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
-	 */
-	function isArrayBufferView(val) {
-	  var result;
-	  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
-	    result = ArrayBuffer.isView(val);
-	  } else {
-	    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
-	  }
-	  return result;
-	}
-	
-	/**
-	 * Determine if a value is a String
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a String, otherwise false
-	 */
-	function isString(val) {
-	  return typeof val === 'string';
-	}
-	
-	/**
-	 * Determine if a value is a Number
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a Number, otherwise false
-	 */
-	function isNumber(val) {
-	  return typeof val === 'number';
-	}
-	
-	/**
-	 * Determine if a value is undefined
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if the value is undefined, otherwise false
-	 */
-	function isUndefined(val) {
-	  return typeof val === 'undefined';
-	}
-	
-	/**
-	 * Determine if a value is an Object
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is an Object, otherwise false
-	 */
-	function isObject(val) {
-	  return val !== null && typeof val === 'object';
-	}
-	
-	/**
-	 * Determine if a value is a Date
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a Date, otherwise false
-	 */
-	function isDate(val) {
-	  return toString.call(val) === '[object Date]';
-	}
-	
-	/**
-	 * Determine if a value is a File
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a File, otherwise false
-	 */
-	function isFile(val) {
-	  return toString.call(val) === '[object File]';
-	}
-	
-	/**
-	 * Determine if a value is a Blob
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a Blob, otherwise false
-	 */
-	function isBlob(val) {
-	  return toString.call(val) === '[object Blob]';
-	}
-	
-	/**
-	 * Determine if a value is a Function
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a Function, otherwise false
-	 */
-	function isFunction(val) {
-	  return toString.call(val) === '[object Function]';
-	}
-	
-	/**
-	 * Determine if a value is a Stream
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a Stream, otherwise false
-	 */
-	function isStream(val) {
-	  return isObject(val) && isFunction(val.pipe);
-	}
-	
-	/**
-	 * Determine if a value is a URLSearchParams object
-	 *
-	 * @param {Object} val The value to test
-	 * @returns {boolean} True if value is a URLSearchParams object, otherwise false
-	 */
-	function isURLSearchParams(val) {
-	  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
-	}
-	
-	/**
-	 * Trim excess whitespace off the beginning and end of a string
-	 *
-	 * @param {String} str The String to trim
-	 * @returns {String} The String freed of excess whitespace
-	 */
-	function trim(str) {
-	  return str.replace(/^\s*/, '').replace(/\s*$/, '');
-	}
-	
-	/**
-	 * Determine if we're running in a standard browser environment
-	 *
-	 * This allows axios to run in a web worker, and react-native.
-	 * Both environments support XMLHttpRequest, but not fully standard globals.
-	 *
-	 * web workers:
-	 *  typeof window -> undefined
-	 *  typeof document -> undefined
-	 *
-	 * react-native:
-	 *  typeof document.createElement -> undefined
-	 */
-	function isStandardBrowserEnv() {
-	  return (
-	    typeof window !== 'undefined' &&
-	    typeof document !== 'undefined' &&
-	    typeof document.createElement === 'function'
-	  );
-	}
-	
-	/**
-	 * Iterate over an Array or an Object invoking a function for each item.
-	 *
-	 * If `obj` is an Array callback will be called passing
-	 * the value, index, and complete array for each item.
-	 *
-	 * If 'obj' is an Object callback will be called passing
-	 * the value, key, and complete object for each property.
-	 *
-	 * @param {Object|Array} obj The object to iterate
-	 * @param {Function} fn The callback to invoke for each item
-	 */
-	function forEach(obj, fn) {
-	  // Don't bother if no value provided
-	  if (obj === null || typeof obj === 'undefined') {
-	    return;
-	  }
-	
-	  // Force an array if not already something iterable
-	  if (typeof obj !== 'object' && !isArray(obj)) {
-	    /*eslint no-param-reassign:0*/
-	    obj = [obj];
-	  }
-	
-	  if (isArray(obj)) {
-	    // Iterate over array values
-	    for (var i = 0, l = obj.length; i < l; i++) {
-	      fn.call(null, obj[i], i, obj);
-	    }
-	  } else {
-	    // Iterate over object keys
-	    for (var key in obj) {
-	      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-	        fn.call(null, obj[key], key, obj);
-	      }
-	    }
-	  }
-	}
-	
-	/**
-	 * Accepts varargs expecting each argument to be an object, then
-	 * immutably merges the properties of each object and returns result.
-	 *
-	 * When multiple objects contain the same key the later object in
-	 * the arguments list will take precedence.
-	 *
-	 * Example:
-	 *
-	 * ```js
-	 * var result = merge({foo: 123}, {foo: 456});
-	 * console.log(result.foo); // outputs 456
-	 * ```
-	 *
-	 * @param {Object} obj1 Object to merge
-	 * @returns {Object} Result of all merge properties
-	 */
-	function merge(/* obj1, obj2, obj3, ... */) {
-	  var result = {};
-	  function assignValue(val, key) {
-	    if (typeof result[key] === 'object' && typeof val === 'object') {
-	      result[key] = merge(result[key], val);
-	    } else {
-	      result[key] = val;
-	    }
-	  }
-	
-	  for (var i = 0, l = arguments.length; i < l; i++) {
-	    forEach(arguments[i], assignValue);
-	  }
-	  return result;
-	}
-	
-	/**
-	 * Extends object a by mutably adding to it the properties of object b.
-	 *
-	 * @param {Object} a The object to be extended
-	 * @param {Object} b The object to copy properties from
-	 * @param {Object} thisArg The object to bind function to
-	 * @return {Object} The resulting value of object a
-	 */
-	function extend(a, b, thisArg) {
-	  forEach(b, function assignValue(val, key) {
-	    if (thisArg && typeof val === 'function') {
-	      a[key] = bind(val, thisArg);
-	    } else {
-	      a[key] = val;
-	    }
-	  });
-	  return a;
-	}
-	
-	module.exports = {
-	  isArray: isArray,
-	  isArrayBuffer: isArrayBuffer,
-	  isFormData: isFormData,
-	  isArrayBufferView: isArrayBufferView,
-	  isString: isString,
-	  isNumber: isNumber,
-	  isObject: isObject,
-	  isUndefined: isUndefined,
-	  isDate: isDate,
-	  isFile: isFile,
-	  isBlob: isBlob,
-	  isFunction: isFunction,
-	  isStream: isStream,
-	  isURLSearchParams: isURLSearchParams,
-	  isStandardBrowserEnv: isStandardBrowserEnv,
-	  forEach: forEach,
-	  merge: merge,
-	  extend: extend,
-	  trim: trim
-	};
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function bind(fn, thisArg) {
-	  return function wrap() {
-	    var args = new Array(arguments.length);
-	    for (var i = 0; i < args.length; i++) {
-	      args[i] = arguments[i];
-	    }
-	    return fn.apply(thisArg, args);
-	  };
-	};
-
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var defaults = __webpack_require__(26);
-	var utils = __webpack_require__(23);
-	var InterceptorManager = __webpack_require__(37);
-	var dispatchRequest = __webpack_require__(38);
-	var isAbsoluteURL = __webpack_require__(41);
-	var combineURLs = __webpack_require__(42);
-	
-	/**
-	 * Create a new instance of Axios
-	 *
-	 * @param {Object} instanceConfig The default config for the instance
-	 */
-	function Axios(instanceConfig) {
-	  this.defaults = instanceConfig;
-	  this.interceptors = {
-	    request: new InterceptorManager(),
-	    response: new InterceptorManager()
-	  };
-	}
-	
-	/**
-	 * Dispatch a request
-	 *
-	 * @param {Object} config The config specific for this request (merged with this.defaults)
-	 */
-	Axios.prototype.request = function request(config) {
-	  /*eslint no-param-reassign:0*/
-	  // Allow for axios('example/url'[, config]) a la fetch API
-	  if (typeof config === 'string') {
-	    config = utils.merge({
-	      url: arguments[0]
-	    }, arguments[1]);
-	  }
-	
-	  config = utils.merge(defaults, this.defaults, { method: 'get' }, config);
-	
-	  // Support baseURL config
-	  if (config.baseURL && !isAbsoluteURL(config.url)) {
-	    config.url = combineURLs(config.baseURL, config.url);
-	  }
-	
-	  // Hook up interceptors middleware
-	  var chain = [dispatchRequest, undefined];
-	  var promise = Promise.resolve(config);
-	
-	  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
-	    chain.unshift(interceptor.fulfilled, interceptor.rejected);
-	  });
-	
-	  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
-	    chain.push(interceptor.fulfilled, interceptor.rejected);
-	  });
-	
-	  while (chain.length) {
-	    promise = promise.then(chain.shift(), chain.shift());
-	  }
-	
-	  return promise;
-	};
-	
-	// Provide aliases for supported request methods
-	utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
-	  /*eslint func-names:0*/
-	  Axios.prototype[method] = function(url, config) {
-	    return this.request(utils.merge(config || {}, {
-	      method: method,
-	      url: url
-	    }));
-	  };
-	});
-	
-	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
-	  /*eslint func-names:0*/
-	  Axios.prototype[method] = function(url, data, config) {
-	    return this.request(utils.merge(config || {}, {
-	      method: method,
-	      url: url,
-	      data: data
-	    }));
-	  };
-	});
-	
-	module.exports = Axios;
-
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-	
-	var utils = __webpack_require__(23);
-	var normalizeHeaderName = __webpack_require__(27);
-	
-	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
-	var DEFAULT_CONTENT_TYPE = {
-	  'Content-Type': 'application/x-www-form-urlencoded'
-	};
-	
-	function setContentTypeIfUnset(headers, value) {
-	  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
-	    headers['Content-Type'] = value;
-	  }
-	}
-	
-	function getDefaultAdapter() {
-	  var adapter;
-	  if (typeof XMLHttpRequest !== 'undefined') {
-	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(28);
-	  } else if (typeof process !== 'undefined') {
-	    // For node use HTTP adapter
-	    adapter = __webpack_require__(28);
-	  }
-	  return adapter;
-	}
-	
-	var defaults = {
-	  adapter: getDefaultAdapter(),
-	
-	  transformRequest: [function transformRequest(data, headers) {
-	    normalizeHeaderName(headers, 'Content-Type');
-	    if (utils.isFormData(data) ||
-	      utils.isArrayBuffer(data) ||
-	      utils.isStream(data) ||
-	      utils.isFile(data) ||
-	      utils.isBlob(data)
-	    ) {
-	      return data;
-	    }
-	    if (utils.isArrayBufferView(data)) {
-	      return data.buffer;
-	    }
-	    if (utils.isURLSearchParams(data)) {
-	      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
-	      return data.toString();
-	    }
-	    if (utils.isObject(data)) {
-	      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
-	      return JSON.stringify(data);
-	    }
-	    return data;
-	  }],
-	
-	  transformResponse: [function transformResponse(data) {
-	    /*eslint no-param-reassign:0*/
-	    if (typeof data === 'string') {
-	      data = data.replace(PROTECTION_PREFIX, '');
-	      try {
-	        data = JSON.parse(data);
-	      } catch (e) { /* Ignore */ }
-	    }
-	    return data;
-	  }],
-	
-	  timeout: 0,
-	
-	  xsrfCookieName: 'XSRF-TOKEN',
-	  xsrfHeaderName: 'X-XSRF-TOKEN',
-	
-	  maxContentLength: -1,
-	
-	  validateStatus: function validateStatus(status) {
-	    return status >= 200 && status < 300;
-	  }
-	};
-	
-	defaults.headers = {
-	  common: {
-	    'Accept': 'application/json, text/plain, */*'
-	  }
-	};
-	
-	utils.forEach(['delete', 'get', 'head'], function forEachMehtodNoData(method) {
-	  defaults.headers[method] = {};
-	});
-	
-	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
-	  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
-	});
-	
-	module.exports = defaults;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	module.exports = function normalizeHeaderName(headers, normalizedName) {
-	  utils.forEach(headers, function processHeader(value, name) {
-	    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
-	      headers[normalizedName] = value;
-	      delete headers[name];
-	    }
-	  });
-	};
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-	
-	var utils = __webpack_require__(23);
-	var settle = __webpack_require__(29);
-	var buildURL = __webpack_require__(32);
-	var parseHeaders = __webpack_require__(33);
-	var isURLSameOrigin = __webpack_require__(34);
-	var createError = __webpack_require__(30);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(35);
-	
-	module.exports = function xhrAdapter(config) {
-	  return new Promise(function dispatchXhrRequest(resolve, reject) {
-	    var requestData = config.data;
-	    var requestHeaders = config.headers;
-	
-	    if (utils.isFormData(requestData)) {
-	      delete requestHeaders['Content-Type']; // Let the browser set it
-	    }
-	
-	    var request = new XMLHttpRequest();
-	    var loadEvent = 'onreadystatechange';
-	    var xDomain = false;
-	
-	    // For IE 8/9 CORS support
-	    // Only supports POST and GET calls and doesn't returns the response headers.
-	    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
-	    if (process.env.NODE_ENV !== 'test' &&
-	        typeof window !== 'undefined' &&
-	        window.XDomainRequest && !('withCredentials' in request) &&
-	        !isURLSameOrigin(config.url)) {
-	      request = new window.XDomainRequest();
-	      loadEvent = 'onload';
-	      xDomain = true;
-	      request.onprogress = function handleProgress() {};
-	      request.ontimeout = function handleTimeout() {};
-	    }
-	
-	    // HTTP basic authentication
-	    if (config.auth) {
-	      var username = config.auth.username || '';
-	      var password = config.auth.password || '';
-	      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
-	    }
-	
-	    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
-	
-	    // Set the request timeout in MS
-	    request.timeout = config.timeout;
-	
-	    // Listen for ready state
-	    request[loadEvent] = function handleLoad() {
-	      if (!request || (request.readyState !== 4 && !xDomain)) {
-	        return;
-	      }
-	
-	      // The request errored out and we didn't get a response, this will be
-	      // handled by onerror instead
-	      // With one exception: request that using file: protocol, most browsers
-	      // will return status as 0 even though it's a successful request
-	      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
-	        return;
-	      }
-	
-	      // Prepare the response
-	      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
-	      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
-	      var response = {
-	        data: responseData,
-	        // IE sends 1223 instead of 204 (https://github.com/mzabriskie/axios/issues/201)
-	        status: request.status === 1223 ? 204 : request.status,
-	        statusText: request.status === 1223 ? 'No Content' : request.statusText,
-	        headers: responseHeaders,
-	        config: config,
-	        request: request
-	      };
-	
-	      settle(resolve, reject, response);
-	
-	      // Clean up request
-	      request = null;
-	    };
-	
-	    // Handle low level network errors
-	    request.onerror = function handleError() {
-	      // Real errors are hidden from us by the browser
-	      // onerror should only fire if it's a network error
-	      reject(createError('Network Error', config));
-	
-	      // Clean up request
-	      request = null;
-	    };
-	
-	    // Handle timeout
-	    request.ontimeout = function handleTimeout() {
-	      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED'));
-	
-	      // Clean up request
-	      request = null;
-	    };
-	
-	    // Add xsrf header
-	    // This is only done if running in a standard browser environment.
-	    // Specifically not if we're in a web worker, or react-native.
-	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(36);
-	
-	      // Add xsrf header
-	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
-	          cookies.read(config.xsrfCookieName) :
-	          undefined;
-	
-	      if (xsrfValue) {
-	        requestHeaders[config.xsrfHeaderName] = xsrfValue;
-	      }
-	    }
-	
-	    // Add headers to the request
-	    if ('setRequestHeader' in request) {
-	      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
-	        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
-	          // Remove Content-Type if data is undefined
-	          delete requestHeaders[key];
-	        } else {
-	          // Otherwise add header to the request
-	          request.setRequestHeader(key, val);
-	        }
-	      });
-	    }
-	
-	    // Add withCredentials to request if needed
-	    if (config.withCredentials) {
-	      request.withCredentials = true;
-	    }
-	
-	    // Add responseType to request if needed
-	    if (config.responseType) {
-	      try {
-	        request.responseType = config.responseType;
-	      } catch (e) {
-	        if (request.responseType !== 'json') {
-	          throw e;
-	        }
-	      }
-	    }
-	
-	    // Handle progress if needed
-	    if (typeof config.onDownloadProgress === 'function') {
-	      request.addEventListener('progress', config.onDownloadProgress);
-	    }
-	
-	    // Not all browsers support upload events
-	    if (typeof config.onUploadProgress === 'function' && request.upload) {
-	      request.upload.addEventListener('progress', config.onUploadProgress);
-	    }
-	
-	    if (config.cancelToken) {
-	      // Handle cancellation
-	      config.cancelToken.promise.then(function onCanceled(cancel) {
-	        if (!request) {
-	          return;
-	        }
-	
-	        request.abort();
-	        reject(cancel);
-	        // Clean up request
-	        request = null;
-	      });
-	    }
-	
-	    if (requestData === undefined) {
-	      requestData = null;
-	    }
-	
-	    // Send the request
-	    request.send(requestData);
-	  });
-	};
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var createError = __webpack_require__(30);
-	
-	/**
-	 * Resolve or reject a Promise based on response status.
-	 *
-	 * @param {Function} resolve A function that resolves the promise.
-	 * @param {Function} reject A function that rejects the promise.
-	 * @param {object} response The response.
-	 */
-	module.exports = function settle(resolve, reject, response) {
-	  var validateStatus = response.config.validateStatus;
-	  // Note: status is not exposed by XDomainRequest
-	  if (!response.status || !validateStatus || validateStatus(response.status)) {
-	    resolve(response);
-	  } else {
-	    reject(createError(
-	      'Request failed with status code ' + response.status,
-	      response.config,
-	      null,
-	      response
-	    ));
-	  }
-	};
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var enhanceError = __webpack_require__(31);
-	
-	/**
-	 * Create an Error with the specified message, config, error code, and response.
-	 *
-	 * @param {string} message The error message.
-	 * @param {Object} config The config.
-	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
-	 @ @param {Object} [response] The response.
-	 * @returns {Error} The created error.
-	 */
-	module.exports = function createError(message, config, code, response) {
-	  var error = new Error(message);
-	  return enhanceError(error, config, code, response);
-	};
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * Update an Error with the specified config, error code, and response.
-	 *
-	 * @param {Error} error The error to update.
-	 * @param {Object} config The config.
-	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
-	 @ @param {Object} [response] The response.
-	 * @returns {Error} The error.
-	 */
-	module.exports = function enhanceError(error, config, code, response) {
-	  error.config = config;
-	  if (code) {
-	    error.code = code;
-	  }
-	  error.response = response;
-	  return error;
-	};
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	function encode(val) {
-	  return encodeURIComponent(val).
-	    replace(/%40/gi, '@').
-	    replace(/%3A/gi, ':').
-	    replace(/%24/g, '$').
-	    replace(/%2C/gi, ',').
-	    replace(/%20/g, '+').
-	    replace(/%5B/gi, '[').
-	    replace(/%5D/gi, ']');
-	}
-	
-	/**
-	 * Build a URL by appending params to the end
-	 *
-	 * @param {string} url The base of the url (e.g., http://www.google.com)
-	 * @param {object} [params] The params to be appended
-	 * @returns {string} The formatted url
-	 */
-	module.exports = function buildURL(url, params, paramsSerializer) {
-	  /*eslint no-param-reassign:0*/
-	  if (!params) {
-	    return url;
-	  }
-	
-	  var serializedParams;
-	  if (paramsSerializer) {
-	    serializedParams = paramsSerializer(params);
-	  } else if (utils.isURLSearchParams(params)) {
-	    serializedParams = params.toString();
-	  } else {
-	    var parts = [];
-	
-	    utils.forEach(params, function serialize(val, key) {
-	      if (val === null || typeof val === 'undefined') {
-	        return;
-	      }
-	
-	      if (utils.isArray(val)) {
-	        key = key + '[]';
-	      }
-	
-	      if (!utils.isArray(val)) {
-	        val = [val];
-	      }
-	
-	      utils.forEach(val, function parseValue(v) {
-	        if (utils.isDate(v)) {
-	          v = v.toISOString();
-	        } else if (utils.isObject(v)) {
-	          v = JSON.stringify(v);
-	        }
-	        parts.push(encode(key) + '=' + encode(v));
-	      });
-	    });
-	
-	    serializedParams = parts.join('&');
-	  }
-	
-	  if (serializedParams) {
-	    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
-	  }
-	
-	  return url;
-	};
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	/**
-	 * Parse headers into an object
-	 *
-	 * ```
-	 * Date: Wed, 27 Aug 2014 08:58:49 GMT
-	 * Content-Type: application/json
-	 * Connection: keep-alive
-	 * Transfer-Encoding: chunked
-	 * ```
-	 *
-	 * @param {String} headers Headers needing to be parsed
-	 * @returns {Object} Headers parsed into an object
-	 */
-	module.exports = function parseHeaders(headers) {
-	  var parsed = {};
-	  var key;
-	  var val;
-	  var i;
-	
-	  if (!headers) { return parsed; }
-	
-	  utils.forEach(headers.split('\n'), function parser(line) {
-	    i = line.indexOf(':');
-	    key = utils.trim(line.substr(0, i)).toLowerCase();
-	    val = utils.trim(line.substr(i + 1));
-	
-	    if (key) {
-	      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
-	    }
-	  });
-	
-	  return parsed;
-	};
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	module.exports = (
-	  utils.isStandardBrowserEnv() ?
-	
-	  // Standard browser envs have full support of the APIs needed to test
-	  // whether the request URL is of the same origin as current location.
-	  (function standardBrowserEnv() {
-	    var msie = /(msie|trident)/i.test(navigator.userAgent);
-	    var urlParsingNode = document.createElement('a');
-	    var originURL;
-	
-	    /**
-	    * Parse a URL to discover it's components
-	    *
-	    * @param {String} url The URL to be parsed
-	    * @returns {Object}
-	    */
-	    function resolveURL(url) {
-	      var href = url;
-	
-	      if (msie) {
-	        // IE needs attribute set twice to normalize properties
-	        urlParsingNode.setAttribute('href', href);
-	        href = urlParsingNode.href;
-	      }
-	
-	      urlParsingNode.setAttribute('href', href);
-	
-	      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
-	      return {
-	        href: urlParsingNode.href,
-	        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
-	        host: urlParsingNode.host,
-	        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
-	        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
-	        hostname: urlParsingNode.hostname,
-	        port: urlParsingNode.port,
-	        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
-	                  urlParsingNode.pathname :
-	                  '/' + urlParsingNode.pathname
-	      };
-	    }
-	
-	    originURL = resolveURL(window.location.href);
-	
-	    /**
-	    * Determine if a URL shares the same origin as the current location
-	    *
-	    * @param {String} requestURL The URL to test
-	    * @returns {boolean} True if URL shares the same origin, otherwise false
-	    */
-	    return function isURLSameOrigin(requestURL) {
-	      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
-	      return (parsed.protocol === originURL.protocol &&
-	            parsed.host === originURL.host);
-	    };
-	  })() :
-	
-	  // Non standard browser envs (web workers, react-native) lack needed support.
-	  (function nonStandardBrowserEnv() {
-	    return function isURLSameOrigin() {
-	      return true;
-	    };
-	  })()
-	);
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
-	
-	var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-	
-	function E() {
-	  this.message = 'String contains an invalid character';
-	}
-	E.prototype = new Error;
-	E.prototype.code = 5;
-	E.prototype.name = 'InvalidCharacterError';
-	
-	function btoa(input) {
-	  var str = String(input);
-	  var output = '';
-	  for (
-	    // initialize result and counter
-	    var block, charCode, idx = 0, map = chars;
-	    // if the next str index does not exist:
-	    //   change the mapping table to "="
-	    //   check if d has no fractional digits
-	    str.charAt(idx | 0) || (map = '=', idx % 1);
-	    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
-	    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
-	  ) {
-	    charCode = str.charCodeAt(idx += 3 / 4);
-	    if (charCode > 0xFF) {
-	      throw new E();
-	    }
-	    block = block << 8 | charCode;
-	  }
-	  return output;
-	}
-	
-	module.exports = btoa;
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	module.exports = (
-	  utils.isStandardBrowserEnv() ?
-	
-	  // Standard browser envs support document.cookie
-	  (function standardBrowserEnv() {
-	    return {
-	      write: function write(name, value, expires, path, domain, secure) {
-	        var cookie = [];
-	        cookie.push(name + '=' + encodeURIComponent(value));
-	
-	        if (utils.isNumber(expires)) {
-	          cookie.push('expires=' + new Date(expires).toGMTString());
-	        }
-	
-	        if (utils.isString(path)) {
-	          cookie.push('path=' + path);
-	        }
-	
-	        if (utils.isString(domain)) {
-	          cookie.push('domain=' + domain);
-	        }
-	
-	        if (secure === true) {
-	          cookie.push('secure');
-	        }
-	
-	        document.cookie = cookie.join('; ');
-	      },
-	
-	      read: function read(name) {
-	        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
-	        return (match ? decodeURIComponent(match[3]) : null);
-	      },
-	
-	      remove: function remove(name) {
-	        this.write(name, '', Date.now() - 86400000);
-	      }
-	    };
-	  })() :
-	
-	  // Non standard browser env (web workers, react-native) lack needed support.
-	  (function nonStandardBrowserEnv() {
-	    return {
-	      write: function write() {},
-	      read: function read() { return null; },
-	      remove: function remove() {}
-	    };
-	  })()
-	);
-
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	function InterceptorManager() {
-	  this.handlers = [];
-	}
-	
-	/**
-	 * Add a new interceptor to the stack
-	 *
-	 * @param {Function} fulfilled The function to handle `then` for a `Promise`
-	 * @param {Function} rejected The function to handle `reject` for a `Promise`
-	 *
-	 * @return {Number} An ID used to remove interceptor later
-	 */
-	InterceptorManager.prototype.use = function use(fulfilled, rejected) {
-	  this.handlers.push({
-	    fulfilled: fulfilled,
-	    rejected: rejected
-	  });
-	  return this.handlers.length - 1;
-	};
-	
-	/**
-	 * Remove an interceptor from the stack
-	 *
-	 * @param {Number} id The ID that was returned by `use`
-	 */
-	InterceptorManager.prototype.eject = function eject(id) {
-	  if (this.handlers[id]) {
-	    this.handlers[id] = null;
-	  }
-	};
-	
-	/**
-	 * Iterate over all the registered interceptors
-	 *
-	 * This method is particularly useful for skipping over any
-	 * interceptors that may have become `null` calling `eject`.
-	 *
-	 * @param {Function} fn The function to call for each interceptor
-	 */
-	InterceptorManager.prototype.forEach = function forEach(fn) {
-	  utils.forEach(this.handlers, function forEachHandler(h) {
-	    if (h !== null) {
-	      fn(h);
-	    }
-	  });
-	};
-	
-	module.exports = InterceptorManager;
-
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	var transformData = __webpack_require__(39);
-	var isCancel = __webpack_require__(40);
-	var defaults = __webpack_require__(26);
-	
-	/**
-	 * Throws a `Cancel` if cancellation has been requested.
-	 */
-	function throwIfCancellationRequested(config) {
-	  if (config.cancelToken) {
-	    config.cancelToken.throwIfRequested();
-	  }
-	}
-	
-	/**
-	 * Dispatch a request to the server using the configured adapter.
-	 *
-	 * @param {object} config The config that is to be used for the request
-	 * @returns {Promise} The Promise to be fulfilled
-	 */
-	module.exports = function dispatchRequest(config) {
-	  throwIfCancellationRequested(config);
-	
-	  // Ensure headers exist
-	  config.headers = config.headers || {};
-	
-	  // Transform request data
-	  config.data = transformData(
-	    config.data,
-	    config.headers,
-	    config.transformRequest
-	  );
-	
-	  // Flatten headers
-	  config.headers = utils.merge(
-	    config.headers.common || {},
-	    config.headers[config.method] || {},
-	    config.headers || {}
-	  );
-	
-	  utils.forEach(
-	    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
-	    function cleanHeaderConfig(method) {
-	      delete config.headers[method];
-	    }
-	  );
-	
-	  var adapter = config.adapter || defaults.adapter;
-	
-	  return adapter(config).then(function onAdapterResolution(response) {
-	    throwIfCancellationRequested(config);
-	
-	    // Transform response data
-	    response.data = transformData(
-	      response.data,
-	      response.headers,
-	      config.transformResponse
-	    );
-	
-	    return response;
-	  }, function onAdapterRejection(reason) {
-	    if (!isCancel(reason)) {
-	      throwIfCancellationRequested(config);
-	
-	      // Transform response data
-	      if (reason && reason.response) {
-	        reason.response.data = transformData(
-	          reason.response.data,
-	          reason.response.headers,
-	          config.transformResponse
-	        );
-	      }
-	    }
-	
-	    return Promise.reject(reason);
-	  });
-	};
-
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var utils = __webpack_require__(23);
-	
-	/**
-	 * Transform the data for a request or a response
-	 *
-	 * @param {Object|String} data The data to be transformed
-	 * @param {Array} headers The headers for the request or response
-	 * @param {Array|Function} fns A single function or Array of functions
-	 * @returns {*} The resulting transformed data
-	 */
-	module.exports = function transformData(data, headers, fns) {
-	  /*eslint no-param-reassign:0*/
-	  utils.forEach(fns, function transform(fn) {
-	    data = fn(data, headers);
-	  });
-	
-	  return data;
-	};
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function isCancel(value) {
-	  return !!(value && value.__CANCEL__);
-	};
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * Determines whether the specified URL is absolute
-	 *
-	 * @param {string} url The URL to test
-	 * @returns {boolean} True if the specified URL is absolute, otherwise false
-	 */
-	module.exports = function isAbsoluteURL(url) {
-	  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-	  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-	  // by any combination of letters, digits, plus, period, or hyphen.
-	  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
-	};
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * Creates a new URL by combining the specified URLs
-	 *
-	 * @param {string} baseURL The base URL
-	 * @param {string} relativeURL The relative URL
-	 * @returns {string} The combined URL
-	 */
-	module.exports = function combineURLs(baseURL, relativeURL) {
-	  return baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
-	};
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * A `Cancel` is an object that is thrown when an operation is canceled.
-	 *
-	 * @class
-	 * @param {string=} message The message.
-	 */
-	function Cancel(message) {
-	  this.message = message;
-	}
-	
-	Cancel.prototype.toString = function toString() {
-	  return 'Cancel' + (this.message ? ': ' + this.message : '');
-	};
-	
-	Cancel.prototype.__CANCEL__ = true;
-	
-	module.exports = Cancel;
-
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var Cancel = __webpack_require__(43);
-	
-	/**
-	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
-	 *
-	 * @class
-	 * @param {Function} executor The executor function.
-	 */
-	function CancelToken(executor) {
-	  if (typeof executor !== 'function') {
-	    throw new TypeError('executor must be a function.');
-	  }
-	
-	  var resolvePromise;
-	  this.promise = new Promise(function promiseExecutor(resolve) {
-	    resolvePromise = resolve;
-	  });
-	
-	  var token = this;
-	  executor(function cancel(message) {
-	    if (token.reason) {
-	      // Cancellation has already been requested
-	      return;
-	    }
-	
-	    token.reason = new Cancel(message);
-	    resolvePromise(token.reason);
-	  });
-	}
-	
-	/**
-	 * Throws a `Cancel` if cancellation has been requested.
-	 */
-	CancelToken.prototype.throwIfRequested = function throwIfRequested() {
-	  if (this.reason) {
-	    throw this.reason;
-	  }
-	};
-	
-	/**
-	 * Returns an object that contains a new `CancelToken` and a function that, when called,
-	 * cancels the `CancelToken`.
-	 */
-	CancelToken.source = function source() {
-	  var cancel;
-	  var token = new CancelToken(function executor(c) {
-	    cancel = c;
-	  });
-	  return {
-	    token: token,
-	    cancel: cancel
-	  };
-	};
-	
-	module.exports = CancelToken;
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * Syntactic sugar for invoking a function and expanding an array for arguments.
-	 *
-	 * Common use case would be to use `Function.prototype.apply`.
-	 *
-	 *  ```js
-	 *  function f(x, y, z) {}
-	 *  var args = [1, 2, 3];
-	 *  f.apply(null, args);
-	 *  ```
-	 *
-	 * With `spread` this example can be re-written.
-	 *
-	 *  ```js
-	 *  spread(function(x, y, z) {})([1, 2, 3]);
-	 *  ```
-	 *
-	 * @param {Function} callback
-	 * @returns {Function}
-	 */
-	module.exports = function spread(callback) {
-	  return function wrap(arr) {
-	    return callback.apply(null, arr);
-	  };
-	};
-
-
-/***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 	
 	/* styles */
-	__webpack_require__(47)
+	__webpack_require__(49)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(49)
+	__vue_exports__ = __webpack_require__(51)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(50)
+	var __vue_template__ = __webpack_require__(52)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -26369,13 +26564,13 @@
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(9)(content, {});
@@ -26395,7 +26590,7 @@
 	}
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -26409,7 +26604,7 @@
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26418,11 +26613,11 @@
 	    value: true
 	});
 	
-	var _izitoast = __webpack_require__(17);
+	var _izitoast = __webpack_require__(45);
 	
 	var _izitoast2 = _interopRequireDefault(_izitoast);
 	
-	var _todo = __webpack_require__(18);
+	var _todo = __webpack_require__(46);
 	
 	var _todo2 = _interopRequireDefault(_todo);
 	
@@ -26484,7 +26679,7 @@
 	};
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -26570,7 +26765,7 @@
 	}
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -26663,7 +26858,7 @@
 	}
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26676,13 +26871,17 @@
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _vuex = __webpack_require__(53);
+	var _vuex = __webpack_require__(55);
 	
 	var _vuex2 = _interopRequireDefault(_vuex);
 	
-	var _todo = __webpack_require__(18);
+	var _todo = __webpack_require__(46);
 	
 	var _todo2 = _interopRequireDefault(_todo);
+	
+	var _user = __webpack_require__(12);
+	
+	var _user2 = _interopRequireDefault(_user);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26697,14 +26896,15 @@
 	        msg: "hello "
 	    },
 	    modules: {
-	        todoModule: _todo2.default
+	        todoModule: _todo2.default,
+	        userModule: _user2.default
 	    }
 	});
 	window.ss = store;
 	exports.default = store;
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -27519,7 +27719,7 @@
 
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	exports.sync = function (store, router, options) {
@@ -27584,12 +27784,10 @@
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(56)
-	__webpack_require__(57)
 	__webpack_require__(58)
 	__webpack_require__(59)
 	__webpack_require__(60)
@@ -27600,9 +27798,11 @@
 	__webpack_require__(65)
 	__webpack_require__(66)
 	__webpack_require__(67)
+	__webpack_require__(68)
+	__webpack_require__(69)
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -27668,7 +27868,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -27769,7 +27969,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -27901,7 +28101,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -28145,7 +28345,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -28364,7 +28564,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -28536,7 +28736,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -28882,7 +29082,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -29409,7 +29609,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -29524,7 +29724,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -29703,7 +29903,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -29865,7 +30065,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -30034,16 +30234,16 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(69);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(70)(content, {});
+	var update = __webpack_require__(72)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -30060,7 +30260,7 @@
 	}
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -30074,7 +30274,7 @@
 
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*

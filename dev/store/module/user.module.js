@@ -14,11 +14,14 @@ const types = {
 const Service = new UserService
 
 const state = {
-    nowUser: [],
+    nowUser: {
+        username: '',
+        password: ''
+    },
 }
 
 const mutations = {
-    [types.LOGIN] (state, todos) {
+    [types.LOGIN] (state, user) {
         state.todos = todos;
     },
     [types.REGISTER] (state, user) {
@@ -34,6 +37,10 @@ const mutations = {
     [types.UPDATE](state, app){
         TodoService.UpdateArrayById(state.todos, app)
     },
+    setUser(state, user){
+        alert()
+        state.nowUser = user;
+    }
 
 }
 

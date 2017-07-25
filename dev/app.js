@@ -17,11 +17,11 @@ require('izitoast/dist/css/iziToast.min.css')
 Vue.use(VueRouter);
 sync(store, router);
 const app = new Vue({
-
+    store,
+    router,
     components: {
 
         App
     },
-    store,
-    router,
+
 }).$mount('#app');
