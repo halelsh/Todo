@@ -84,7 +84,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*!
-	 * Vue.js v2.4.1
+	 * Vue.js v2.4.2
 	 * (c) 2014-2017 Evan You
 	 * Released under the MIT License.
 	 */
@@ -118,7 +118,11 @@
 	 * Check if value is primitive
 	 */
 	function isPrimitive (value) {
-	  return typeof value === 'string' || typeof value === 'number'
+	  return (
+	    typeof value === 'string' ||
+	    typeof value === 'number' ||
+	    typeof value === 'boolean'
+	  )
 	}
 	
 	/**
@@ -341,14 +345,30 @@
 	 * if they are plain objects, do they have the same shape?
 	 */
 	function looseEqual (a, b) {
+	  if (a === b) { return true }
 	  var isObjectA = isObject(a);
 	  var isObjectB = isObject(b);
 	  if (isObjectA && isObjectB) {
 	    try {
-	      return JSON.stringify(a) === JSON.stringify(b)
+	      var isArrayA = Array.isArray(a);
+	      var isArrayB = Array.isArray(b);
+	      if (isArrayA && isArrayB) {
+	        return a.length === b.length && a.every(function (e, i) {
+	          return looseEqual(e, b[i])
+	        })
+	      } else if (!isArrayA && !isArrayB) {
+	        var keysA = Object.keys(a);
+	        var keysB = Object.keys(b);
+	        return keysA.length === keysB.length && keysA.every(function (key) {
+	          return looseEqual(a[key], b[key])
+	        })
+	      } else {
+	        /* istanbul ignore next */
+	        return false
+	      }
 	    } catch (e) {
-	      // possible circular reference
-	      return a === b
+	      /* istanbul ignore next */
+	      return false
 	    }
 	  } else if (!isObjectA && !isObjectB) {
 	    return String(a) === String(b)
@@ -1213,7 +1233,7 @@
 	    return function mergedDataFn () {
 	      return mergeData(
 	        typeof childVal === 'function' ? childVal.call(this) : childVal,
-	        parentVal.call(this)
+	        typeof parentVal === 'function' ? parentVal.call(this) : parentVal
 	      )
 	    }
 	  } else if (parentVal || childVal) {
@@ -1329,11 +1349,10 @@
 	strats.methods =
 	strats.inject =
 	strats.computed = function (parentVal, childVal) {
-	  if (!childVal) { return Object.create(parentVal || null) }
 	  if (!parentVal) { return childVal }
 	  var ret = Object.create(null);
 	  extend(ret, parentVal);
-	  extend(ret, childVal);
+	  if (childVal) { extend(ret, childVal); }
 	  return ret
 	};
 	strats.provide = mergeDataOrFn;
@@ -3273,17 +3292,14 @@
 	  for (var key in computed) {
 	    var userDef = computed[key];
 	    var getter = typeof userDef === 'function' ? userDef : userDef.get;
-	    {
-	      if (getter === undefined) {
-	        warn(
-	          ("No getter function has been defined for computed property \"" + key + "\"."),
-	          vm
-	        );
-	        getter = noop;
-	      }
+	    if ("development" !== 'production' && getter == null) {
+	      warn(
+	        ("Getter is missing for computed property \"" + key + "\"."),
+	        vm
+	      );
 	    }
 	    // create internal watcher for the computed property.
-	    watchers[key] = new Watcher(vm, getter, noop, computedWatcherOptions);
+	    watchers[key] = new Watcher(vm, getter || noop, noop, computedWatcherOptions);
 	
 	    // component-defined computed properties are already defined on the
 	    // component prototype. We only need to define computed properties defined
@@ -3313,6 +3329,15 @@
 	    sharedPropertyDefinition.set = userDef.set
 	      ? userDef.set
 	      : noop;
+	  }
+	  if ("development" !== 'production' &&
+	      sharedPropertyDefinition.set === noop) {
+	    sharedPropertyDefinition.set = function () {
+	      warn(
+	        ("Computed property \"" + key + "\" was assigned to but it has no setter."),
+	        this
+	      );
+	    };
 	  }
 	  Object.defineProperty(target, key, sharedPropertyDefinition);
 	}
@@ -3483,7 +3508,7 @@
 	        }
 	        source = source.$parent;
 	      }
-	      if ("development" !== 'production' && !hasOwn(result, key)) {
+	      if ("development" !== 'production' && !source) {
 	        warn(("Injection \"" + key + "\" not found"), vm);
 	      }
 	    }
@@ -3676,8 +3701,12 @@
 	    return createFunctionalComponent(Ctor, propsData, data, context, children)
 	  }
 	
-	  // keep listeners
+	  // extract listeners, since these needs to be treated as
+	  // child component listeners instead of DOM listeners
 	  var listeners = data.on;
+	  // replace with listeners with .native modifier
+	  // so it gets processed during parent component patch.
+	  data.on = data.nativeOn;
 	
 	  if (isTrue(Ctor.options.abstract)) {
 	    // abstract components do not keep anything
@@ -4140,7 +4169,7 @@
 	    defineReactive$$1(vm, '$attrs', parentData && parentData.attrs, function () {
 	      !isUpdatingChildComponent && warn("$attrs is readonly.", vm);
 	    }, true);
-	    defineReactive$$1(vm, '$listeners', parentData && parentData.on, function () {
+	    defineReactive$$1(vm, '$listeners', vm.$options._parentListeners, function () {
 	      !isUpdatingChildComponent && warn("$listeners is readonly.", vm);
 	    }, true);
 	  }
@@ -4702,7 +4731,7 @@
 	  }
 	});
 	
-	Vue$3.version = '2.4.1';
+	Vue$3.version = '2.4.2';
 	
 	/*  */
 	
@@ -6362,7 +6391,7 @@
 	    'if(Array.isArray($$a)){' +
 	      "var $$v=" + (number ? '_n(' + valueBinding + ')' : valueBinding) + "," +
 	          '$$i=_i($$a,$$v);' +
-	      "if($$c){$$i<0&&(" + value + "=$$a.concat($$v))}" +
+	      "if($$el.checked){$$i<0&&(" + value + "=$$a.concat($$v))}" +
 	      "else{$$i>-1&&(" + value + "=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}" +
 	    "}else{" + (genAssignmentCode(value, '$$c')) + "}",
 	    null, true
@@ -6498,14 +6527,11 @@
 	}
 	
 	function updateDOMListeners (oldVnode, vnode) {
-	  var isComponentRoot = isDef(vnode.componentOptions);
-	  var oldOn = isComponentRoot ? oldVnode.data.nativeOn : oldVnode.data.on;
-	  var on = isComponentRoot ? vnode.data.nativeOn : vnode.data.on;
-	  if (isUndef(oldOn) && isUndef(on)) {
+	  if (isUndef(oldVnode.data.on) && isUndef(vnode.data.on)) {
 	    return
 	  }
-	  on = on || {};
-	  oldOn = oldOn || {};
+	  var on = vnode.data.on || {};
+	  var oldOn = oldVnode.data.on || {};
 	  target$1 = vnode.elm;
 	  normalizeEvents(on);
 	  updateListeners(on, oldOn, add$1, remove$2, vnode.context);
@@ -6579,7 +6605,11 @@
 	function isDirty (elm, checkVal) {
 	  // return true when textbox (.number and .trim) loses focus and its value is
 	  // not equal to the updated value
-	  return document.activeElement !== elm && elm.value !== checkVal
+	  var notInFocus = true;
+	  // #6157
+	  // work around IE bug when accessing document.activeElement in an iframe
+	  try { notInFocus = document.activeElement !== elm; } catch (e) {}
+	  return notInFocus && elm.value !== checkVal
 	}
 	
 	function isInputChanged (elm, newVal) {
@@ -7359,6 +7389,7 @@
 	      if (isIE || isEdge) {
 	        setTimeout(cb, 0);
 	      }
+	      el._vOptions = [].map.call(el.options, getValue);
 	    } else if (vnode.tag === 'textarea' || isTextInputType(el.type)) {
 	      el._vModifiers = binding.modifiers;
 	      if (!binding.modifiers.lazy) {
@@ -7385,10 +7416,9 @@
 	      // it's possible that the value is out-of-sync with the rendered options.
 	      // detect such cases and filter out values that no longer has a matching
 	      // option in the DOM.
-	      var needReset = el.multiple
-	        ? binding.value.some(function (v) { return hasNoMatchingOption(v, el.options); })
-	        : binding.value !== binding.oldValue && hasNoMatchingOption(binding.value, el.options);
-	      if (needReset) {
+	      var prevOptions = el._vOptions;
+	      var curOptions = el._vOptions = [].map.call(el.options, getValue);
+	      if (curOptions.some(function (o, i) { return !looseEqual(o, prevOptions[i]); })) {
 	        trigger(el, 'change');
 	      }
 	    }
@@ -7426,15 +7456,6 @@
 	  if (!isMultiple) {
 	    el.selectedIndex = -1;
 	  }
-	}
-	
-	function hasNoMatchingOption (value, options) {
-	  for (var i = 0, l = options.length; i < l; i++) {
-	    if (looseEqual(getValue(options[i]), value)) {
-	      return false
-	    }
-	  }
-	  return true
 	}
 	
 	function getValue (option) {
@@ -7477,7 +7498,7 @@
 	    var transition$$1 = vnode.data && vnode.data.transition;
 	    var originalDisplay = el.__vOriginalDisplay =
 	      el.style.display === 'none' ? '' : el.style.display;
-	    if (value && transition$$1 && !isIE9) {
+	    if (value && transition$$1) {
 	      vnode.data.show = true;
 	      enter(vnode, function () {
 	        el.style.display = originalDisplay;
@@ -7495,7 +7516,7 @@
 	    if (value === oldValue) { return }
 	    vnode = locateNode(vnode);
 	    var transition$$1 = vnode.data && vnode.data.transition;
-	    if (transition$$1 && !isIE9) {
+	    if (transition$$1) {
 	      vnode.data.show = true;
 	      if (value) {
 	        enter(vnode, function () {
@@ -8236,9 +8257,6 @@
 	    last = html;
 	    // Make sure we're not in a plaintext content element like script/style
 	    if (!lastTag || !isPlainTextElement(lastTag)) {
-	      if (shouldIgnoreFirstNewline(lastTag, html)) {
-	        advance(1);
-	      }
 	      var textEnd = html.indexOf('<');
 	      if (textEnd === 0) {
 	        // Comment:
@@ -8284,6 +8302,9 @@
 	        var startTagMatch = parseStartTag();
 	        if (startTagMatch) {
 	          handleStartTag(startTagMatch);
+	          if (shouldIgnoreFirstNewline(lastTag, html)) {
+	            advance(1);
+	          }
 	          continue
 	        }
 	      }
@@ -8944,8 +8965,8 @@
 	            );
 	          }
 	        }
-	        if (!el.component && (
-	          isProp || platformMustUseProp(el.tag, el.attrsMap.type, name)
+	        if (isProp || (
+	          !el.component && platformMustUseProp(el.tag, el.attrsMap.type, name)
 	        )) {
 	          addProp(el, name, value);
 	        } else {
@@ -9731,7 +9752,7 @@
 	}
 	
 	function genComment (comment) {
-	  return ("_e('" + (comment.text) + "')")
+	  return ("_e(" + (JSON.stringify(comment.text)) + ")")
 	}
 	
 	function genSlot (el, state) {
@@ -11122,7 +11143,7 @@
 	    _createClass(TodoService, [{
 	        key: "className",
 	        get: function get() {
-	            return "todos";
+	            return "tasks";
 	        }
 	    }]);
 	
@@ -13044,7 +13065,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#frame[data-v-a6cc7a56] {\n    max-width: 500px;\n    /*height: 700px;*/\n    /*background-color: #a5dc86;*/\n    margin-left: auto;\n    margin-right: auto;\n    float: none;\n    -webkit-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n    -moz-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n    box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n}\n#title[data-v-a6cc7a56] {\n    background-color: #2a6496;\n    width: 100%;\n    height: 80px;\n    color: white;\n    font-size: large;\n    padding-top: 5%;\n    padding-left: 42%;\n    margin-bottom: 10%;\n}\n#title-text[data-v-a6cc7a56] {\n    margin-left: auto;\n    margin-right: auto;\n    /*float: none;*/\n}\n.row[data-v-a6cc7a56] {\n    margin-right: unset;\n    margin-left: unset;\n}\n#created-by[data-v-a6cc7a56] {\n    font-size: x-large;\n}\n#new-task-btn[data-v-a6cc7a56] {\n    margin-top: 10%;\n    margin-bottom: 10%;\n}\n", "", {"version":3,"sources":["C:/wamp64/www/todo/dev/views/app.vue?753ba6d6"],"names":[],"mappings":";AAgGA;IACA,iBAAA;IACA,kBAAA;IACA,8BAAA;IACA,kBAAA;IACA,mBAAA;IACA,YAAA;IACA,0DAAA;IACA,uDAAA;IACA,kDAAA;CAEA;AAEA;IACA,0BAAA;IACA,YAAA;IACA,aAAA;IACA,aAAA;IACA,iBAAA;IACA,gBAAA;IACA,kBAAA;IACA,mBAAA;CAEA;AAEA;IACA,kBAAA;IACA,mBAAA;IACA,gBAAA;CACA;AAEA;IACA,oBAAA;IACA,mBAAA;CACA;AAEA;IACA,mBAAA;CACA;AAEA;IACA,gBAAA;IACA,mBAAA;CACA","file":"app.vue","sourcesContent":["<template>\r\n    <div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                <span id=\"created-by\">Created By Adiel Shalit</span>\r\n            </div>\r\n        </div>\r\n        <div id=\"frame\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <div id=\"title\">\r\n                        <span id=\"title-text\">Todo List</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <table class=\"table table-striped\">\r\n                        <tr is=\"Todo\" :todo=\"t\" v-for=\"t in todos\"></tr>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <input type=\"text\" class=\"form-control\" maxlength=\"70\" v-model=\"newTodo.content\"\r\n                           placeholder=\"Feel free to add TODO.....\"/>\r\n                </div>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-12\">\r\n                        <button class=\"btn btn-success pull-right\" id=\"new-task-btn\" @click=\"addNewTodo\">Add new task\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n    </div>\r\n</template>\r\n\r\n\r\n<script>\r\n    import iziToast from 'izitoast'\r\n    import todoModule from '../store/module/todo.module'\r\n    export default {\r\n        props: [],\r\n\r\n        components: {\r\n            Todo: require('./todo.vue')\r\n        },\r\n        data () {\r\n            return {\r\n                newTodo: {\r\n                    content: '',\r\n                    completed: false\r\n                }\r\n            }\r\n        },\r\n\r\n        computed: {\r\n            todos: function () {\r\n                return this.$store.state.todoModule.todos\r\n            }\r\n        },\r\n        methods: {\r\n            addNewTodo(){\r\n                this.$store.dispatch(todoModule.types.CREATE, this.newTodo).then(res => {\r\n                    console.log(res)\r\n                    if (res.success) {\r\n                        iziToast.success({\r\n                            title: 'Done',\r\n                            message: 'Good Job!',\r\n                            position: 'topCenter',\r\n\r\n                        });\r\n                    }\r\n                })\r\n            }\r\n        },\r\n        created(){\r\n            this.$store.dispatch(todoModule.types.FETCH)\r\n        },\r\n        mounted(){\r\n        },\r\n        updated(){\r\n        },\r\n        destroyed(){\r\n\r\n\r\n        }\r\n    }\r\n</script>\r\n\r\n<style scoped>\r\n    #frame {\r\n        max-width: 500px;\r\n        /*height: 700px;*/\r\n        /*background-color: #a5dc86;*/\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        float: none;\r\n        -webkit-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n        -moz-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n        box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n\r\n    }\r\n\r\n    #title {\r\n        background-color: #2a6496;\r\n        width: 100%;\r\n        height: 80px;\r\n        color: white;\r\n        font-size: large;\r\n        padding-top: 5%;\r\n        padding-left: 42%;\r\n        margin-bottom: 10%;\r\n\r\n    }\r\n\r\n    #title-text {\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        /*float: none;*/\r\n    }\r\n\r\n    .row {\r\n        margin-right: unset;\r\n        margin-left: unset;\r\n    }\r\n\r\n    #created-by {\r\n        font-size: x-large;\r\n    }\r\n\r\n    #new-task-btn {\r\n        margin-top: 10%;\r\n        margin-bottom: 10%;\r\n    }\r\n</style>"],"sourceRoot":""}]);
+	exports.push([module.id, "\n#frame[data-v-a6cc7a56] {\n    max-width: 500px;\n    /*height: 700px;*/\n    /*background-color: #a5dc86;*/\n    margin-left: auto;\n    margin-right: auto;\n    float: none;\n    -webkit-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n    -moz-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n    box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\n}\n#title[data-v-a6cc7a56] {\n    background-color: #2a6496;\n    width: 100%;\n    height: 80px;\n    color: white;\n    font-size: large;\n    padding-top: 5%;\n    padding-left: 42%;\n    margin-bottom: 5%;\n}\n#title-text[data-v-a6cc7a56] {\n    margin-left: auto;\n    margin-right: auto;\n    /*float: none;*/\n}\n.row[data-v-a6cc7a56] {\n    margin-right: unset;\n    margin-left: unset;\n}\n#created-by[data-v-a6cc7a56] {\n    font-size: x-large;\n}\n#new-task-btn[data-v-a6cc7a56] {\n    margin-top: 10%;\n    margin-bottom: 10%;\n}\n", "", {"version":3,"sources":["C:/wamp64/www/todo/dev/views/app.vue?276dec42"],"names":[],"mappings":";AAgGA;IACA,iBAAA;IACA,kBAAA;IACA,8BAAA;IACA,kBAAA;IACA,mBAAA;IACA,YAAA;IACA,0DAAA;IACA,uDAAA;IACA,kDAAA;CAEA;AAEA;IACA,0BAAA;IACA,YAAA;IACA,aAAA;IACA,aAAA;IACA,iBAAA;IACA,gBAAA;IACA,kBAAA;IACA,kBAAA;CAGA;AAEA;IACA,kBAAA;IACA,mBAAA;IACA,gBAAA;CACA;AAEA;IACA,oBAAA;IACA,mBAAA;CACA;AAEA;IACA,mBAAA;CACA;AAEA;IACA,gBAAA;IACA,mBAAA;CACA","file":"app.vue","sourcesContent":["<template>\r\n    <div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                <span id=\"created-by\">Created By Adiel Shalit</span>\r\n            </div>\r\n        </div>\r\n        <div id=\"frame\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <div id=\"title\">\r\n                        <span id=\"title-text\">Todo List</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <table class=\"table table-striped\">\r\n                        <tr is=\"Todo\" :todo=\"t\" v-for=\"t in todos\"></tr>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n                    <input type=\"text\" class=\"form-control\" maxlength=\"70\" v-model=\"newTodo.content\"\r\n                           placeholder=\"Feel free to add TODO.....\"/>\r\n                </div>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-12\">\r\n                        <button class=\"btn btn-success pull-right\" id=\"new-task-btn\" @click=\"addNewTodo\">Add new task\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n    </div>\r\n</template>\r\n\r\n\r\n<script>\r\n    import iziToast from 'izitoast'\r\n    import todoModule from '../store/module/todo.module'\r\n    export default {\r\n        props: [],\r\n\r\n        components: {\r\n            Todo: require('./todo.vue')\r\n        },\r\n        data () {\r\n            return {\r\n                newTodo: {\r\n                    content: '',\r\n                    completed: false\r\n                }\r\n            }\r\n        },\r\n\r\n        computed: {\r\n            todos: function () {\r\n                return this.$store.state.todoModule.todos\r\n            }\r\n        },\r\n        methods: {\r\n            addNewTodo(){\r\n                this.$store.dispatch(todoModule.types.CREATE, this.newTodo).then(res => {\r\n                    console.log(res)\r\n                    if (res.success) {\r\n                        iziToast.success({\r\n                            title: 'Done',\r\n                            message: 'Good Job!',\r\n                            position: 'topCenter',\r\n\r\n                        });\r\n                    }\r\n                })\r\n            }\r\n        },\r\n        created(){\r\n            this.$store.dispatch(todoModule.types.FETCH)\r\n        },\r\n        mounted(){\r\n        },\r\n        updated(){\r\n        },\r\n        destroyed(){\r\n\r\n\r\n        }\r\n    }\r\n</script>\r\n\r\n<style scoped>\r\n    #frame {\r\n        max-width: 500px;\r\n        /*height: 700px;*/\r\n        /*background-color: #a5dc86;*/\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        float: none;\r\n        -webkit-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n        -moz-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n        box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);\r\n\r\n    }\r\n\r\n    #title {\r\n        background-color: #2a6496;\r\n        width: 100%;\r\n        height: 80px;\r\n        color: white;\r\n        font-size: large;\r\n        padding-top: 5%;\r\n        padding-left: 42%;\r\n        margin-bottom: 5%;\r\n\r\n\r\n    }\r\n\r\n    #title-text {\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        /*float: none;*/\r\n    }\r\n\r\n    .row {\r\n        margin-right: unset;\r\n        margin-left: unset;\r\n    }\r\n\r\n    #created-by {\r\n        font-size: x-large;\r\n    }\r\n\r\n    #new-task-btn {\r\n        margin-top: 10%;\r\n        margin-bottom: 10%;\r\n    }\r\n</style>"],"sourceRoot":""}]);
 	
 	// exports
 
@@ -14543,7 +14564,7 @@
 	        if (Array.isArray($$a)) {
 	          var $$v = null,
 	            $$i = _vm._i($$a, $$v);
-	          if ($$c) {
+	          if ($$el.checked) {
 	            $$i < 0 && (_vm.todo.completed = $$a.concat($$v))
 	          } else {
 	            $$i > -1 && (_vm.todo.completed = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
