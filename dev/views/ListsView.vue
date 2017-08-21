@@ -1,0 +1,151 @@
+<template>
+    <div>
+        <div class="row">
+            <div class="col-md-1 righting">
+                <side-bar :closeSideBar="closeSideBar"
+                ></side-bar>
+            </div>
+            <div class="col-md-11">
+                <h4 id="title-text text-center">רשימת מטלות</h4>
+            </div>
+        </div>
+
+        <div class="row" id="listsFrame">
+            <div class="col-md-12" is="List" :todoList="l" v-for="l in lists"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <button class="btn btn-success pull-right btn-block" id="new-task-btn" @click="addNewList">
+                    הוסף
+                </button>
+            </div>
+            <div class="col-xs-9">
+                <input id="new-list-textbox" type="text" class="form-control" maxlength="70" v-model="newList.content"
+                       @keyup.13="addNewList" placeholder="כתוב משהו.."/>
+            </div>
+
+        </div>
+
+    </div>
+</template>
+
+
+<script>
+    import iziToast from 'izitoast'
+    import listModule from '../store/module/list.module'
+
+    export default {
+        props: [],
+
+        components: {
+            List: require('./List.vue'),
+            "side-bar": require('./Mysidebar.vue'),
+
+        },
+        data() {
+            return {
+                newList: {
+                    name: '',
+                }
+            }
+        },
+        computed:
+            {
+                lists: function () {
+                    return this.$store.state.listModule.lists
+                }
+            }
+        ,
+        methods: {
+            addNewList() {
+                this.$store.dispatch(listModule.types.CREATE, this.newList).then(res => {
+                    if (res.success) {
+                        iziToast.success({
+                            title: 'נוסף בהצלחה',
+//                            message: 'Good Job!',
+                            position: 'topCenter',
+                            timeout: 300,
+
+                        });
+                        this.newList.content = ''
+                    }
+                })
+            }
+        }
+        ,
+        created() {
+            this.$store.dispatch(listModule.types.FETCH)
+        }
+        ,
+        mounted() {
+        }
+        ,
+        updated() {
+        }
+        ,
+        destroyed() {
+
+
+        }
+    }
+</script>
+
+<style scoped>
+    #frame {
+        max-width: 500px;
+        /*height: 700px;*/
+        /*background-color: #a5dc86;*/
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        -webkit-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);
+        -moz-box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);
+        box-shadow: -2px 5px 42px 1px rgba(0, 0, 0, 0.65);
+
+    }
+
+    #title {
+        background-color: #2a6496;
+        width: 100%;
+        height: 80px;
+        color: white;
+        font-size: large;
+        padding-top: 5%;
+        padding-left: 42%;
+        margin-bottom: 5%;
+
+    }
+
+    #title-text {
+        margin-left: auto;
+        margin-right: auto;
+        /*float: none;*/
+    }
+
+    .row {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    #created-by {
+        font-size: x-large;
+    }
+
+    #new-task-btn {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    #new-list-textbox {
+        margin-top: 2.5%;
+    }
+
+    #listsFrame {
+        height: 75vh;
+        overflow-y: scroll;
+    }
+
+    .righting {
+        padding-right: 0 !important;
+    }
+</style>

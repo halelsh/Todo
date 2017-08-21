@@ -3,11 +3,12 @@
  */
 import Vue from "vue/dist/vue";
 import Vuex from "vuex";
-import loginModule from "./module/login.module";
 
 Vue.use(Vuex);
+import loginModule from "./module/login.module";
 import todoModule from "./module/todo.module";
 import userModule from "./module/user.module";
+import listModule from "./module/list.module";
 
 
 const store = new Vuex.Store({
@@ -17,6 +18,7 @@ const store = new Vuex.Store({
     modules: {
         todoModule,
         userModule,
+        listModule,
         loginModule,
     }
 });

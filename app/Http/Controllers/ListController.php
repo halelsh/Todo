@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Todo;
+use App\TodoList;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
-class TodoController extends Controller
+class ListController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-//        return Todo::getTodosByList();
+        $todoLists = TodoList::getAllUserLists(Auth::id());
+        return TodoList::getAllUserLists(Auth::id());
     }
 
     /**
@@ -52,10 +54,10 @@ class TodoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        return ["data" => TODO::where('list_id', '=', $id)->get(), "success" => true];
-    }
+//    public function show($id)
+//    {
+//        //
+//    }
 
     /**
      * Show the form for editing the specified resource.

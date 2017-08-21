@@ -4,13 +4,16 @@
 import VueRouter from 'vue-router'
 import LoginView from './views/LoginView.vue'
 import RegisterView from './views/RegisterView.vue'
-import MainPage from './views/MainView.vue'
+import TodosView from './views/TodosView.vue'
+import ListsView from './views/ListsView.vue'
 import store from "./store";
 import loginModule from "./store/module/login.module";
 
 
 const routes = [
-    {path: '/', component: MainPage, meta: {RequiresAuth: true}},
+    {path: '/', component: ListsView, meta: {RequiresAuth: true}},
+    {path: '/todos', component: TodosView, meta: {RequiresAuth: true}},
+    {path: '/lists', component: ListsView, meta: {RequiresAuth: true}},
     {path: '/login', component: LoginView, name: 'login'},
     {path: '/main', component: LoginView},
     {path: '/register', component: RegisterView},

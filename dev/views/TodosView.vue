@@ -1,25 +1,17 @@
 <template>
     <div>
         <div class="row">
-            <!--<div class="col-md-12">-->
-            <!--<span id="created-by">נוצר ע"י עדיאל שליט</span>-->
-            <!--</div>-->
-        </div>
-        <!--<div id="frame">-->
-        <div class="row">
-            <div class="col-md-12">
-                <!--<div id="title">-->
+            <div class="col-md-1 righting">
+                <side-bar :closeSideBar="closeSideBar"
+                ></side-bar>
+            </div>
+            <div class="col-md-11">
                 <h4 id="title-text text-center">רשימת מטלות</h4>
-                <!--</div>-->
             </div>
         </div>
 
         <div class="row" id="todosFrame">
-            <!--<div class="col-md-12">-->
-            <!--<table class="table table-striped">-->
             <div class="col-md-12" is="Todo" :todo="t" v-for="t in todos"></div>
-            <!--</table>-->
-            <!--</div>-->
         </div>
         <div class="row">
             <div class="col-xs-3">
@@ -34,7 +26,6 @@
 
         </div>
 
-        <!--</div>-->
     </div>
 </template>
 
@@ -47,7 +38,9 @@
         props: [],
 
         components: {
-            Todo: require('./todo.vue')
+            Todo: require('./Todo.vue'),
+            "side-bar": require('./Mysidebar.vue'),
+
         },
         data() {
             return {
@@ -151,5 +144,9 @@
     #todosFrame {
         height: 75vh;
         overflow-y: scroll;
+    }
+
+    .righting {
+        padding-right: 0 !important;
     }
 </style>

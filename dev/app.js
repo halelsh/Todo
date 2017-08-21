@@ -13,7 +13,7 @@ import store from "./store";
 // import Vodal from 'vodal';
 // import "vodal/common.css";
 // import "vodal/rotate.css";
-import App from './views/MainView.vue'
+import App from './views/ListsView.vue'
 
 require('izitoast/dist/css/iziToast.min.css')
 // Vue.component(Vodal.name, Vodal);

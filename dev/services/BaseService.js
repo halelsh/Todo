@@ -1,4 +1,5 @@
 import * as axios from "axios";
+
 /**
  * Created by elad on 20 נובמבר 2016.
  */
@@ -30,7 +31,7 @@ export default class BaseService {
         );
     }
 
-    get(id, params = {}) {
+    get (id, params = {}) {
         return axios.get(this.className + '/' + id).then(
             response => {
                 if (response.data) {
@@ -108,6 +109,12 @@ export default class BaseService {
         return founded
     }
 
+    static findById(arr, id) {
+        return arr.find(obj => {
+            console.log(obj)
+            return obj.id == id
+        })
+    }
 
     // fromDataToFd(data) {
     //     let fd = new FormData();

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Todo extends Model
 {
@@ -10,8 +11,13 @@ class Todo extends Model
 //    protected $table = 'todos';
 //    protected $fillable = ['completed', 'content'];
 
-    public static function getAllUserTodos($id)
+    public static function getTodosByList($id)
     {
-        return Self::where('user_id', '=', $id)->get();
+        $user_list_id = TodoList::find($id);
+        if (Auth::id() == $user_list_id) {
+            return Todo::where('list_id', '=', $id)
+                ->get();
+        }
+        return -1;
     }
 }

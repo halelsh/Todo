@@ -5,6 +5,7 @@ import TodoService from "../../services/TodoService";
 
 const types = {
     FETCH: "todo/fetch",
+    GET: "todo/get",
     REMOVE: "todo/remove",
     CREATE: "todo/create",
     UPDATE: "todo/update",
@@ -30,6 +31,9 @@ const mutations = {
     [types.UPDATE](state, app) {
         TodoService.UpdateArrayById(state.todos, app)
     },
+    [types.GET](state, todos) {
+        state.todos = todos
+    },
 
 }
 
@@ -45,6 +49,12 @@ const actions = {
     [types.REMOVE](context, todo) {
         return Service.remove(todo.id).then(data => {
             context.commit(types.REMOVE, todo)
+            return data
+        })
+    },
+    [types.GET](context, listId) {
+        return Service.get(listId).then(data => {
+            context.commit(types.GET, data.data)
             return data
         })
     },
