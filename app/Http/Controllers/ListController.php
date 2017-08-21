@@ -40,10 +40,10 @@ class ListController extends Controller
     public function store(Request $request)
     {
 
-        $attr = $request->only('content', 'completed');
+        $attr = $request->only('name');
         $attr["user_id"] = Auth::id();
-        if ($todo = Todo::create($attr))
-            return ["success" => true, "data" => $todo];
+        if ($list = TodoList::create($attr))
+            return ["success" => true, "data" => $list];
         return ["success" => false];
 
     }
@@ -79,10 +79,10 @@ class ListController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $attr = $request->only('completed', 'content');
-        $todo = Todo::find($id);
-        if ($todo->update($attr)) {
-            return ["success" => true, "data" => $todo];
+        $attr = $request->only('name');
+        $list = TodoList::find($id);
+        if ($list->update($attr)) {
+            return ["success" => true, "data" => $list];
         }
         return ["success" => false];
     }
@@ -95,7 +95,7 @@ class ListController extends Controller
      */
     public function destroy($id)
     {
-        $todo = Todo::find($id);
+        $todo = TodoList::find($id);
         if ($todo->delete()) {
             return ["success" => true];
         }

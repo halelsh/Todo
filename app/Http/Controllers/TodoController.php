@@ -38,8 +38,7 @@ class TodoController extends Controller
     public function store(Request $request)
     {
 
-        $attr = $request->only('content', 'completed');
-        $attr["user_id"] = Auth::id();
+        $attr = $request->only('content', 'completed', 'list_id');
         if ($todo = Todo::create($attr))
             return ["success" => true, "data" => $todo];
         return ["success" => false];

@@ -59,6 +59,8 @@
         ,
         methods: {
             addNewTodo() {
+                this.newTodo.list_id = this.$store.state.listModule.nowList.id
+
                 this.$store.dispatch(todoModule.types.CREATE, this.newTodo).then(res => {
                     if (res.success) {
                         iziToast.success({
@@ -75,7 +77,7 @@
         }
         ,
         created() {
-            this.$store.dispatch(todoModule.types.FETCH)
+//            this.$store.dispatch(todoModule.types.FETCH)
         }
         ,
         mounted() {

@@ -20,7 +20,7 @@
                 </button>
             </div>
             <div class="col-xs-9">
-                <input id="new-list-textbox" type="text" class="form-control" maxlength="70" v-model="newList.content"
+                <input id="new-list-textbox" type="text" class="form-control" maxlength="70" v-model="newList.name"
                        @keyup.13="addNewList" placeholder="כתוב משהו.."/>
             </div>
 

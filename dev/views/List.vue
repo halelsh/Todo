@@ -14,12 +14,14 @@
         </div>
 
         <hr>
+        <button class="btn btn-primary" :id="todoList.id" @click="changeNowList">גש למשימות</button>
     </div>
 </template>
 
 <script>
     import iziToast from 'izitoast'
     import listModule from '../store/module/list.module'
+    import todoModule from '../store/module/todo.module'
 
     export default {
         props: ["todoList"],
@@ -32,8 +34,14 @@
 
         computed: {},
         methods: {
-            deleteTodo() {
-                this.$store.dispatch(listModule.types.REMOVE, this.list)
+            deleteList() {
+                this.$store.dispatch(listModule.types.REMOVE, this.todoList)
+            },
+            changeNowList() {
+
+                this.$store.commit("setNowList", this.todoList.id)
+                this.$store.dispatch(todoModule.types.GET, listModule.state.nowList.id)
+                this.$router.push('/todos')
             },
 
 
@@ -49,7 +57,7 @@
             },
             submit() {
                 this.onEdit = false;
-                this.$store.dispatch(listModule.types.UPDATE, this.list)
+                this.$store.dispatch(listModule.types.UPDATE, this.todoList)
             }
         },
         created() {
