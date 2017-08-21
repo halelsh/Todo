@@ -1,257 +1,201 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-login">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <a href="#" class="active" id="login-form-link">Login</a>
-                            </div>
-                            <div class="col-xs-6">
-                                <a href="#" id="register-form-link">Register</a>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <form id="login-form"
-                                      role="form" style="display: block;">
-                                    <div class="form-group">
-                                        <input type="text" name="username" tabindex="1"
-                                               v-model="user.username" class="form-control" placeholder="Username"
-                                               value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" name="password" tabindex="2"
-                                               v-model="user.password" class="form-control" placeholder="Password">
-                                    </div>
-                                    <div class="form-group text-center">
-                                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                        <label for="remember"> Remember Me</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-sm-offset-3">
-                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4"
-                                                       class="form-control btn btn-login" value="Log In">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-center">
-                                                    <a href="https://phpoll.com/recover" tabindex="5"
-                                                       class="forgot-password">Forgot Password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <form id="register-form" action="https://phpoll.com/register/process" method="post"
-                                      role="form" style="display: none;">
-                                    <div class="form-group">
-                                        <input type="text" name="username" id="username" tabindex="1"
-                                               class="form-control" placeholder="Username" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" tabindex="1" class="form-control"
-                                               placeholder="Email Address" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" name="password" id="password" tabindex="2"
-                                               class="form-control" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" name="confirm-password" id="confirm-password"
-                                               tabindex="2" class="form-control" placeholder="Confirm Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-sm-offset-3">
-                                                <input type="submit" name="register-submit" id="register-submit"
-                                                       tabindex="4" class="form-control btn btn-register"
-                                                       value="Register Now">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="login-container">
+            <div id="output"></div>
+            <div class="avatar"></div>
+            <div class="form-box">
+                <form>
+                    <input v-model="form.email" name="user" type="text" placeholder="אימייל">
+                    <input v-model="form.password" type="password" placeholder="סיסמא">
+                    <button class="btn btn-info btn-block login" type="button" @click="onSubmit">הכנס</button>
+                    <label v-if="errMsg">בעיה בכניסה.  בבקשה לבדוק את הפרטים</label>
+                    <router-link to="/register">הרשם עכשיו</router-link>
+                </form>
             </div>
         </div>
+
     </div>
 </template>
 
 <script>
+    import loginModule from '../store/module/login.module'
 
-    import userModule from '../store/module/user.module'
     export default {
         props: [],
         components: {},
-        data () {
-            return {}
-        },
-        computed: {
-            user: {
-                get () {
-                    console.log("on get")
-                    return this.$store.state.userModule.nowUser
-                },
-                set (value) {
-                    console.log("on set")
-                    this.$store.commit('setUser', value)
-                }
+        data() {
+            return {
+                form: {},
+                errMsg: false
             }
         },
-        methods: {},
-        created(){
+        computed: {},
+        methods: {
+            onSubmit() {
+                this.$store.dispatch(loginModule.types.LOGIN, this.form).then((data) => {
+                    if (data.success) {
+                        console.log(data)
+                        this.$router.push('/')
+                    }
+                    else {
+                        this.errMsg = true
+                    }
+                })
+            }
+        },
+        created() {
 
         },
-        mounted(){
-            $(function () {
-
-                $('#login-form-link').click(function (e) {
-                    $("#login-form").delay(100).fadeIn(100);
-                    $("#register-form").fadeOut(100);
-                    $('#register-form-link').removeClass('active');
-                    $(this).addClass('active');
-                    e.preventDefault();
-                });
-                $('#register-form-link').click(function (e) {
-                    $("#register-form").delay(100).fadeIn(100);
-                    $("#login-form").fadeOut(100);
-                    $('#login-form-link').removeClass('active');
-                    $(this).addClass('active');
-                    e.preventDefault();
-                });
-
-            });
-
+        mounted() {
         },
-        updated(){
+        updated() {
         },
-        destroyed(){
+        destroyed() {
         }
     }
 </script>
 
-<style scoped="">
+<style scoped>
     body {
-        padding-top: 90px;
+        background: #eee url(http://subtlepatterns.com/patterns/sativa.png);
     }
 
-    .panel-login {
-        border-color: #ccc;
-        -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    html, body {
+        position: relative;
+        height: 100%;
     }
 
-    .panel-login > .panel-heading {
-        color: #00415d;
-        background-color: #fff;
-        border-color: #fff;
+    .login-container {
+        position: relative;
+        width: 300px;
+        margin: 80px auto;
+        padding: 20px 40px 40px;
         text-align: center;
+        background: #fff;
+        border: 1px solid #ccc;
     }
 
-    .panel-login > .panel-heading a {
-        text-decoration: none;
-        color: #666;
-        font-weight: bold;
-        font-size: 15px;
-        -webkit-transition: all 0.1s linear;
-        -moz-transition: all 0.1s linear;
-        transition: all 0.1s linear;
-    }
-
-    .panel-login > .panel-heading a.active {
-        color: #029f5b;
-        font-size: 18px;
-    }
-
-    .panel-login > .panel-heading hr {
-        margin-top: 10px;
-        margin-bottom: 0px;
-        clear: both;
-        border: 0;
-        height: 1px;
-        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-        background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-        background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-    }
-
-    .panel-login input[type="text"], .panel-login input[type="email"], .panel-login input[type="password"] {
-        height: 45px;
-        border: 1px solid #ddd;
-        font-size: 16px;
-        -webkit-transition: all 0.1s linear;
-        -moz-transition: all 0.1s linear;
-        transition: all 0.1s linear;
-    }
-
-    .panel-login input:hover,
-    .panel-login input:focus {
-        outline: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        border-color: #ccc;
-    }
-
-    .btn-login {
-        background-color: #59B2E0;
-        outline: none;
+    #output {
+        position: absolute;
+        width: 300px;
+        top: -75px;
+        left: 0;
         color: #fff;
-        font-size: 14px;
-        height: auto;
-        font-weight: normal;
-        padding: 14px 0;
-        text-transform: uppercase;
-        border-color: #59B2E6;
     }
 
-    .btn-login:hover,
-    .btn-login:focus {
-        color: #fff;
-        background-color: #53A3CD;
-        border-color: #53A3CD;
+    #output.alert-success {
+        background: rgb(25, 204, 25);
     }
 
-    .forgot-password {
-        text-decoration: underline;
-        color: #888;
+    #output.alert-danger {
+        background: rgb(228, 105, 105);
     }
 
-    .forgot-password:hover,
-    .forgot-password:focus {
-        text-decoration: underline;
-        color: #666;
+    .login-container::before, .login-container::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 3.5px;
+        left: 0;
+        background: #fff;
+        z-index: -1;
+        -webkit-transform: rotateZ(4deg);
+        -moz-transform: rotateZ(4deg);
+        -ms-transform: rotateZ(4deg);
+        border: 1px solid #ccc;
+
     }
 
-    .btn-register {
-        background-color: #1CB94E;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        height: auto;
-        font-weight: normal;
-        padding: 14px 0;
-        text-transform: uppercase;
-        border-color: #1CB94A;
+    .login-container::after {
+        top: 5px;
+        z-index: -2;
+        -webkit-transform: rotateZ(-2deg);
+        -moz-transform: rotateZ(-2deg);
+        -ms-transform: rotateZ(-2deg);
+
     }
 
-    .btn-register:hover,
-    .btn-register:focus {
-        color: #fff;
-        background-color: #1CA347;
-        border-color: #1CA347;
+    .avatar {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto 30px;
+        border-radius: 100%;
+        border: 2px solid #aaa;
+        background-size: cover;
+    }
+
+    .form-box input {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        height: 40px;
+        border: 1px solid #ccc;;
+        background: #fafafa;
+        transition: 0.2s ease-in-out;
+
+    }
+
+    .form-box input:focus {
+        outline: 0;
+        background: #eee;
+    }
+
+    .form-box input[type="text"] {
+        border-radius: 5px 5px 0 0;
+        text-transform: lowercase;
+    }
+
+    .form-box input[type="password"] {
+        border-radius: 0 0 5px 5px;
+        border-top: 0;
+    }
+
+    .form-box button.login {
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @-webkit-keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    .fadeInUp {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
     }
 
 </style>

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Todo;
-use Illuminate\Http\Request;
 use App\User;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
-class TodoController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return Todo::getAllUserTodos(Auth::id());
+        return User::all();
+
     }
 
     /**
@@ -24,10 +24,10 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-//    public function create()
-//    {
-//        //
-//    }
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,13 +37,12 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-
-        $attr = $request->only('content', 'completed');
-        $attr["user_id"] = Auth::id();
-        if ($todo = Todo::create($attr))
-            return ["success" => true, "data" => $todo];
-        return ["success" => false];
-
+        $attr = $request->only('name', 'email', 'password');
+        $user =
+        $attr["password"] = bcrypt($request['password']);
+        if ($user = User::create($attr))
+            return (["data" => $user]);
+        abort('401', 'משתמש לא נמצא!');
     }
 
     /**
@@ -52,10 +51,10 @@ class TodoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-//    public function show($id)
-//    {
-//        //
-//    }
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -63,10 +62,10 @@ class TodoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-//    public function edit($id)
-//    {
-//        //
-//    }
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.
@@ -77,12 +76,15 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $attr = $request->only('completed', 'content');
-        $todo = Todo::find($id);
-        if ($todo->update($attr)) {
-            return ["success" => true, "data" => $todo];
+        $attr = $request->only('name', 'email', 'password', 'birth', 'height', 'weight', 'cellular');
+        $user = User::find($id);
+        if ($user) {
+            $attr["password"] = bcrypt($request['password']);
+            if ($user->update($attr))
+                return (["data" => $user]);
+            abort('500');
         }
-        return ["success" => false];
+        abort('401', 'משתמש לא נמצא!');
     }
 
     /**
@@ -93,12 +95,10 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        $todo = Todo::find($id);
-        if ($todo->delete()) {
-            return ["success" => true];
-        }
-        return ["success" => false];
-
+        $user = User::find($id);
+        if ($user->delete())
+            return ["data" => $user];
+        abort('404', "לא נמצא משתמש");
 
     }
 }

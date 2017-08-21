@@ -1,26 +1,31 @@
 <template>
-    <tr>
-        <td><input type="checkbox" v-model="todo.completed" @change="changeCompleted"/></td>
-        <td v-if="!onEdit" :class="todo.completed ? 'cross':''" @click="comeEdit">{{todo.content}} <i
-                class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </td>
-        <td v-if="onEdit"><input type="text" class="form-control" v-model="todo.content" maxlength="70"
-                                 @keyup.13="submit"/>
-        </td>
-        <td>
-            <button class="btn btn-danger pull-right btn-xs" @click="deleteTodo">X</button>
-        </td>
-    </tr>
+    <div class="row" id="todo">
+        <hr>
+        <div class="col-xs-4">
+            <button class="btn btn-danger pull-left btn-xs" @click="deleteTodo">X</button>
+        </div>
+        <div class="col-xs-6" v-if="!onEdit" :class="todo.completed==1 ? 'cross':''" style="font-size: 16px"
+             @click="comeEdit">
+            {{todo.content}}
+        </div>
+        <div class="col-xs-6" v-if="onEdit"><input type="text" class="form-control" v-model="todo.content"
+                                                   maxlength="70"
+                                                   @focusout="submit" @keyup.13="submit"/>
+        </div>
+        <div class="col-xs-2"><input class="pull-left" type="checkbox" :checked="todo.completed==1"
+                                     @change="changeCompleted"/></div>
+        <hr>
+    </div>
 </template>
-
 
 <script>
     import iziToast from 'izitoast'
     import todoModule from '../store/module/todo.module'
+
     export default {
         props: ["todo"],
         components: {},
-        data () {
+        data() {
             return {
                 onEdit: false
             }
@@ -28,37 +33,45 @@
 
         computed: {},
         methods: {
-            deleteTodo(){
+            deleteTodo() {
                 this.$store.dispatch(todoModule.types.REMOVE, this.todo)
             },
 
-            changeCompleted(){
+            changeCompleted(e) {
+                if (e.target.checked) {
+                    this.todo.completed = true
+                }
+                else {
+                    this.todo.completed = false
+
+                }
                 this.submit()
 
             },
-            comeEdit(){
+            comeEdit() {
                 this.onEdit = true
                 iziToast.info({
-                    title: 'Attention',
-                    message: 'Please press on the "Enter" button to finish editing',
+                    title: 'לחץ על אנטר לסיום',
+//                    message: 'לחץ על ENTER לסיום',
                     position: 'topCenter',
+                    timeout: 300,
 
                 });
             },
-            submit(){
+            submit() {
                 this.onEdit = false;
                 this.$store.dispatch(todoModule.types.UPDATE, this.todo)
             }
         },
-        created(){
+        created() {
 
         },
 
-        mounted(){
+        mounted() {
         },
-        updated(){
+        updated() {
         },
-        destroyed(){
+        destroyed() {
         }
     }
 </script>
@@ -67,6 +80,11 @@
     .cross {
         text-decoration: line-through;
 
+    }
+
+    #todo {
+        padding-top: 3%;
+        padding-bottom: 3%;
     }
 
 </style>

@@ -11,8 +11,17 @@
 |
 */
 
+
+use Illuminate\Support\Facades\Route;
+
 Route::resource('tasks', 'TodoController');
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('users', 'UserController');
+Route::post('users/{id}', 'UserController@update');
+Route::get('get_connect', 'Auth\LoginController@getConnect');
+Route::post('login', 'Auth\LoginController@login');
+Route::get('logout', 'Auth\LoginController@logout');
+Route::resource('register', 'UserController');

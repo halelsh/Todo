@@ -1,42 +1,40 @@
 <template>
     <div>
         <div class="row">
+            <!--<div class="col-md-12">-->
+            <!--<span id="created-by">נוצר ע"י עדיאל שליט</span>-->
+            <!--</div>-->
+        </div>
+        <!--<div id="frame">-->
+        <div class="row">
             <div class="col-md-12">
-                <span id="created-by">Created By Adiel Shalit</span>
+                <!--<div id="title">-->
+                <h4 id="title-text text-center">רשימת מטלות</h4>
+                <!--</div>-->
             </div>
         </div>
-        <div id="frame">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="title">
-                        <span id="title-text">Todo List</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <table class="table table-striped">
-                        <tr is="Todo" :todo="t" v-for="t in todos"></tr>
-                    </table>
-                </div>
+        <div class="row" id="todosFrame">
+            <!--<div class="col-md-12">-->
+            <!--<table class="table table-striped">-->
+            <div class="col-md-12" is="Todo" :todo="t" v-for="t in todos"></div>
+            <!--</table>-->
+            <!--</div>-->
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <button class="btn btn-success pull-right btn-block" id="new-task-btn" @click="addNewTodo">
+                    הוסף
+                </button>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <input type="text" class="form-control" maxlength="70" v-model="newTodo.content"
-                           placeholder="Feel free to add TODO....."/>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button class="btn btn-success pull-right" id="new-task-btn" @click="addNewTodo">Add new task
-                        </button>
-                    </div>
-                </div>
+            <div class="col-xs-9">
+                <input id="new-todo-textbox" type="text" class="form-control" maxlength="70" v-model="newTodo.content"
+                       @keyup.13="addNewTodo" placeholder="כתוב משהו.."/>
             </div>
 
         </div>
 
-
+        <!--</div>-->
     </div>
 </template>
 
@@ -44,13 +42,14 @@
 <script>
     import iziToast from 'izitoast'
     import todoModule from '../store/module/todo.module'
+
     export default {
         props: [],
 
         components: {
             Todo: require('./todo.vue')
         },
-        data () {
+        data() {
             return {
                 newTodo: {
                     content: '',
@@ -58,35 +57,41 @@
                 }
             }
         },
-
-        computed: {
-            todos: function () {
-                return this.$store.state.todoModule.todos
+        computed:
+            {
+                todos: function () {
+                    return this.$store.state.todoModule.todos
+                }
             }
-        },
+        ,
         methods: {
-            addNewTodo(){
+            addNewTodo() {
                 this.$store.dispatch(todoModule.types.CREATE, this.newTodo).then(res => {
-                    console.log(res)
                     if (res.success) {
                         iziToast.success({
-                            title: 'Done',
-                            message: 'Good Job!',
+                            title: 'נוסף בהצלחה',
+//                            message: 'Good Job!',
                             position: 'topCenter',
+                            timeout: 300,
 
                         });
+                        this.newTodo.content = ''
                     }
                 })
             }
-        },
-        created(){
+        }
+        ,
+        created() {
             this.$store.dispatch(todoModule.types.FETCH)
-        },
-        mounted(){
-        },
-        updated(){
-        },
-        destroyed(){
+        }
+        ,
+        mounted() {
+        }
+        ,
+        updated() {
+        }
+        ,
+        destroyed() {
 
 
         }
@@ -117,7 +122,6 @@
         padding-left: 42%;
         margin-bottom: 5%;
 
-
     }
 
     #title-text {
@@ -138,5 +142,14 @@
     #new-task-btn {
         margin-top: 10%;
         margin-bottom: 10%;
+    }
+
+    #new-todo-textbox {
+        margin-top: 2.5%;
+    }
+
+    #todosFrame {
+        height: 75vh;
+        overflow-y: scroll;
     }
 </style>

@@ -10,4 +10,8 @@ class Todo extends Model
 //    protected $table = 'todos';
 //    protected $fillable = ['completed', 'content'];
 
+    public static function getAllUserTodos($id)
+    {
+        return Self::where('user_id', '=', $id)->get();
+    }
 }

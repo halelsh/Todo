@@ -4,11 +4,11 @@
 import UserService from "../../services/UserService";
 
 const types = {
-    LOGIN: "todo/login",
-    REGISTER: "todo/register",
-    REMOVE: "todo/remove",
-    CREATE: "todo/create",
-    UPDATE: "todo/update",
+    LOGIN: "user/login",
+    REGISTER: "user/register",
+    REMOVE: "user/remove",
+    CREATE: "user/create",
+    UPDATE: "user/update",
 
 }
 const Service = new UserService
@@ -21,23 +21,23 @@ const state = {
 }
 
 const mutations = {
-    [types.LOGIN] (state, user) {
+    [types.LOGIN](state, user) {
         state.todos = todos;
     },
-    [types.REGISTER] (state, user) {
+    [types.REGISTER](state, user) {
         state.nowUser = user;
     },
-    [types.REMOVE] (state, todo) {
+    [types.REMOVE](state, todo) {
         TodoService.removeFromArry(state.todos, todo)
     },
-    [types.CREATE](state, todo){
+    [types.CREATE](state, todo) {
         console.log(todo)
         state.todos.push(todo)
     },
-    [types.UPDATE](state, app){
+    [types.UPDATE](state, app) {
         TodoService.UpdateArrayById(state.todos, app)
     },
-    setUser(state, user){
+    setUser(state, user) {
         alert()
         state.nowUser = user;
     }
@@ -45,7 +45,7 @@ const mutations = {
 }
 
 const actions = {
-    [types.LOGIN](context){
+    [types.LOGIN](context) {
         return Service.login().then((data) => {
             context.commit(types.FETCH, data)
             return data
@@ -53,14 +53,14 @@ const actions = {
         })
     },
 
-    [types.REMOVE](context, todo){
+    [types.REMOVE](context, todo) {
         return Service.remove(todo.id).then(data => {
             context.commit(types.REMOVE, todo)
             return data
         })
     },
 
-    [types.CREATE](context, todo){
+    [types.CREATE](context, todo) {
         return Service.create(todo).then(
             (data) => {
                 if (data) {
@@ -69,7 +69,7 @@ const actions = {
                 return data
             });
     },
-    [types.UPDATE](context, todo){
+    [types.UPDATE](context, todo) {
 
         return Service.update(todo, todo.id).then(
             (data) => {
@@ -81,8 +81,7 @@ const actions = {
 
     },
 }
-export default
-{
+export default {
     state,
     actions,
     mutations,
