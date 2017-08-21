@@ -18,11 +18,11 @@
 </head>
 <body>
 <div id="app">
-
+    <navbar></navbar>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <App/>
+                <router-view></router-view>
             </div>
         </div>
     </div>

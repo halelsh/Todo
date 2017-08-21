@@ -1,24 +1,31 @@
 /**
  * Created by Adiel
  */
-import TodoService from "../../services/TodoService";
+import UserService from "../../services/UserService";
 
 const types = {
-    FETCH: "todo/fetch",
-    REMOVE: "todo/remove",
-    CREATE: "todo/create",
-    UPDATE: "todo/update",
+    LOGIN: "user/login",
+    REGISTER: "user/register",
+    REMOVE: "user/remove",
+    CREATE: "user/create",
+    UPDATE: "user/update",
 
 }
-const Service = new TodoService
+const Service = new UserService
 
 const state = {
-    todos: [],
+    nowUser: {
+        username: '',
+        password: ''
+    },
 }
 
 const mutations = {
-    [types.FETCH](state, todos) {
+    [types.LOGIN](state, user) {
         state.todos = todos;
+    },
+    [types.REGISTER](state, user) {
+        state.nowUser = user;
     },
     [types.REMOVE](state, todo) {
         TodoService.removeFromArry(state.todos, todo)
@@ -30,12 +37,16 @@ const mutations = {
     [types.UPDATE](state, app) {
         TodoService.UpdateArrayById(state.todos, app)
     },
+    setUser(state, user) {
+        alert()
+        state.nowUser = user;
+    }
 
 }
 
 const actions = {
-    [types.FETCH](context) {
-        return Service.fetch().then((data) => {
+    [types.LOGIN](context) {
+        return Service.login().then((data) => {
             context.commit(types.FETCH, data)
             return data
 

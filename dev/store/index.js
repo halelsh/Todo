@@ -3,8 +3,11 @@
  */
 import Vue from "vue/dist/vue";
 import Vuex from "vuex";
+import loginModule from "./module/login.module";
+
 Vue.use(Vuex);
 import todoModule from "./module/todo.module";
+import userModule from "./module/user.module";
 
 
 const store = new Vuex.Store({
@@ -13,6 +16,8 @@ const store = new Vuex.Store({
     },
     modules: {
         todoModule,
+        userModule,
+        loginModule,
     }
 });
 window.ss = store;
