@@ -1,4 +1,4 @@
-# Todo
+# Todo - an Todo app with login 
 Todo app vue.js&amp;Laravel
 
 `````````````````
