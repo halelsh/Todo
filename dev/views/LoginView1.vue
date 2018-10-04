@@ -104,7 +104,6 @@
                     return this.$store.state.userModule.nowUser
                 },
                 set (value) {
-                    console.log("on set")
                     this.$store.commit('setUser', value)
                 }
             }
