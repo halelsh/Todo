@@ -20,6 +20,4 @@ const store = new Vuex.Store({
         loginModule,
     }
 });
-window.ss = store;
 export default store;
-
