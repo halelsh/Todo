@@ -55,7 +55,9 @@ export default class BaseService {
             }
         );
     }
-
+    myConsole(str){
+     return console.log("myCL:",str)
+    }
 
     // _errorFunction() {
     //
