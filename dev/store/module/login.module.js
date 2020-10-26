@@ -8,7 +8,7 @@ const types = {
     REGISTER: "REGISTER",
     LOGOUT: "LOGOUT",
     GETCONNECT: "GETCONNECT",
-
+    GETAPPDATA : "GETAPPDATA"
 }
 const Service = new LoginService
 
@@ -63,6 +63,14 @@ const actions = {
     },
     [types.REGISTER](context, data) {
         return Service.register(data).then(data => {
+            if (data) {
+                // context.commit(types.REGISTER, data.data);
+            }
+            return data
+        })
+    },
+    [types.GETAPPDATA](context, data) {
+        return Service.getAppData(data).then(data => {
             if (data) {
                 // context.commit(types.REGISTER, data.data);
             }
