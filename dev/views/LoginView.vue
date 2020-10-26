@@ -43,15 +43,6 @@
                 })
             }
         },
-        created() {
-
-        },
-        mounted() {
-        },
-        updated() {
-        },
-        destroyed() {
-        }
     }
 </script>
 
