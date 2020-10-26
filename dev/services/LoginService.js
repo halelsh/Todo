@@ -37,5 +37,9 @@ export default class LoginService extends BaseService {
                 return response.data;
             }
         );
+    } 
+    
+    myConsole(str){
+        return console.log("My Console:" ,str)
     }
 };
