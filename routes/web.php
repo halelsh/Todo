@@ -25,3 +25,4 @@ Route::get('get_connect', 'Auth\LoginController@getConnect');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout');
 Route::resource('register', 'UserController');
+//Route
