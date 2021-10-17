@@ -38,7 +38,7 @@
             },
 
             changeCompleted(e) {
-                if (e.target.checked) {
+                if (e && e.target && e.target.checked) {
                     this.todo.completed = true
                 }
                 else {
@@ -51,8 +51,7 @@
             comeEdit() {
                 this.onEdit = true
                 iziToast.info({
-                    title: 'לחץ על אנטר לסיום',
-//                    message: 'לחץ על ENTER לסיום',
+                    title: 'Press enter to finish',
                     position: 'topCenter',
                     timeout: 300,
 
